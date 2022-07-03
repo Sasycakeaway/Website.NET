@@ -4,8 +4,9 @@
   import md5 from "md5";
   import emailjs from "@emailjs/browser";
   import { onMount } from "svelte";
-  import CodiceFiscaleUtils from '@marketto/codice-fiscale-utils';
-
+  import * as CodiceFiscaleUtils from '@marketto/codice-fiscale-utils';
+  import { Circle2 } from 'svelte-loading-spinners'
+  let buttonpress = false;
   var user,
     pass,
     passcheck,
@@ -15,7 +16,7 @@
   function registrati() {
     let regDate = new Date();
     let isodate = regDate.toISOString().split('T')[0];
-    if (pass == passcheck && !CodiceFiscaleUtils.Validator.codiceFiscale(codiceFiscale).invalid) {
+    if (pass == passcheck && CodiceFiscaleUtils.Validator.codiceFiscale(cf).valid) {
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
@@ -132,11 +133,15 @@
         </div> -->
       <div align="center">
         <div>
+          {#if buttonpress == false}
           <button
             class="uk-button uk-button-primary"
             type="button"
             on:click={registrati}>Registrati</button
           >
+          {:else}
+          <Circle2 size="120" duration="1s"></Circle2>
+          {/if}
         </div>
       </div>
     </fieldset>

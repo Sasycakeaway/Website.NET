@@ -3,6 +3,9 @@
   import md5 from "md5";
   import { init, getorder, getvariable } from "../../lib/js/paypal";
   import { onMount } from "svelte";
+  import {Loader} from 'google-maps';
+  import { GoogleMap, GooglePlacesAutocomplete } from '@beyonk/svelte-googlemaps'
+  //import google from 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBomQdV10KKTb45y-uIXWl-ZlFgyEOxcsc&libraries=places&callback=initMap'
   let nome,
     cognome,
     indirizzo,
@@ -11,20 +14,22 @@
     totale,
     user,
     pass,
-    cart;
-  onMount(() => {
+    cart,
+    cittavar;
+  onMount(async() => {
     user = sessionStorage.getItem("email");
     totale = localStorage.getItem("totale");
     pass = sessionStorage.getItem("password");
     cart = localStorage.getItem("cart");
-    if(user == null || pass == null){
-      dialogs.alert("Per completare il pagamento devi accedere al sito").then(()=>{
-        location.href = "/ecommerce/login";
-      });
-    }
+    // if(user == null || pass == null){
+    //   dialogs.alert("Per completare il pagamento devi accedere al sito").then(()=>{
+    //     location.href = "/ecommerce/login";
+    //   });
+    // }
   });
   function pagamento() {
-
+    indirizzo = cittavar + "," + indirizzo;
+    console.log(indirizzo);
     if (nome != null && cognome != null && indirizzo != null && cap != null) {
       console.log(domicilio.toString());
       init(
@@ -36,10 +41,13 @@
         domicilio.toString(),
         user,
         pass,
-        cart
+        cart,
       );
       document.getElementById("conf").style.visibility = "hidden";
     } else alert("Compila tutti i campi richiesti");
+  }
+  function citta(e){
+    cittavar = e.detail.place.formatted_address;
   }
 </script>
 
@@ -74,11 +82,15 @@
       <br />
       <br />
 
+      <GooglePlacesAutocomplete apiKey="AIzaSyCcnkrkY74xBbIDf4UZdYH4bZwXaSvh1nM" styleClass="uk-input" on:placeChanged={citta} placeholder="Città"/>
+      <br />
+      <br />
       <input
         class="uk-input"
-        type="text"
+        type="input"
         placeholder="Indirizzo di consegna"
         bind:value={indirizzo}
+        id="map"
       />
       <br />
       <br />
@@ -91,7 +103,7 @@
         name="domicilio"
         bind:checked={domicilio}
       />
-      <label for="domicilio">Consegna a domicilio</label>
+      <label for="domicilio">Consegna a domicilio o spedizione se l'indirizzo di consegna è fuori dal Piemonte</label>
 
       <br />
       <br />
