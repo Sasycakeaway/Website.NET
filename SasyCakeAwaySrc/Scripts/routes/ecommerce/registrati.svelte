@@ -14,6 +14,7 @@
     cf,
     telefono;
   function registrati() {
+    buttonpress = true;
     let regDate = new Date();
     let isodate = regDate.toISOString().split('T')[0];
     if (pass == passcheck && CodiceFiscaleUtils.Validator.codiceFiscale(cf).valid) {
