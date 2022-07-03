@@ -28,9 +28,8 @@
     // }
   });
   function pagamento() {
-    indirizzo = cittavar + "," + indirizzo;
-    console.log(indirizzo);
     if (nome != null && cognome != null && indirizzo != null && cap != null) {
+      indirizzo = cittavar + "," + indirizzo;
       console.log(domicilio.toString());
       init(
         totale,
