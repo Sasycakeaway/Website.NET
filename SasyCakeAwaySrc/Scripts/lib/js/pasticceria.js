@@ -14,11 +14,12 @@ export function initpage() {
 }
 
 export function biscotti(e) {
+  console.log(e);
   dialogs
     .prompt("Quanti sacchetti da 250G vuoi ordinare?")
     .then((output) => {
       try {
-        pusha(e.path[0].id, output[0], 5);
+        pusha(e, output[0], 5);
       } catch (error) {
         console.log(error);
       }
@@ -27,10 +28,10 @@ export function biscotti(e) {
 
 export function pezzi(e) {
   dialogs
-    .prompt("Quanti " + e.path[0].id + " vuoi ordinare?")
+    .prompt("Quanti " + e + " vuoi ordinare?")
     .then((output) => {
       try {
-        pusha(e.path[0].id, output[0], 5);
+        pusha(e, output[0], 5);
       } catch (error) {}
     });
 }
@@ -38,18 +39,18 @@ export function pezzi(e) {
 export function apebox(e) {
   dialogs.prompt("Quanti box vuoi ordinare?").then((output) => {
     try {
-      switch (e.path[0].id) {
+      switch (e) {
         case "Benvenuti al nord":
-          pusha(e.path[0].id, output[0], 12);
+          pusha(e, output[0], 12);
           break;
         case "Il vegetariano":
-          pusha(e.path[0].id, output[0], 12);
+          pusha(e, output[0], 12);
           break;
         case "Il trasformista":
-          pusha(e.path[0].id, output[0], 18);
+          pusha(e, output[0], 18);
           break;
         default:
-          pusha(e.path[0].id, output[0], 15);
+          pusha(e, output[0], 15);
           break;
       }
     } catch (error) {

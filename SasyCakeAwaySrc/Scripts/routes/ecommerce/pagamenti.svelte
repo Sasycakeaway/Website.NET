@@ -3,8 +3,7 @@
   import md5 from "md5";
   import { init, getorder, getvariable } from "../../lib/js/paypal";
   import { onMount } from "svelte";
-  import {Loader} from 'google-maps';
-  import { GoogleMap, GooglePlacesAutocomplete } from '@beyonk/svelte-googlemaps'
+  import { GooglePlacesAutocomplete } from '@beyonk/svelte-googlemaps'
   //import google from 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBomQdV10KKTb45y-uIXWl-ZlFgyEOxcsc&libraries=places&callback=initMap'
   let nome,
     cognome,

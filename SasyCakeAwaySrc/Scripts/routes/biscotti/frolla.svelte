@@ -36,7 +36,7 @@
   <button
     class="uk-button uk-button-primary carbut"
     id="Biscotti di frolla con gli aromi dell'orto"
-    on:click={(event) => biscotti(event)}>Aggiungi al carrello</button
+    on:click={() => biscotti("Biscotti di frolla con gli aromi dell'orto")}>Aggiungi al carrello</button
   >
   <h1>&nbsp;</h1>
   <div class="testo">

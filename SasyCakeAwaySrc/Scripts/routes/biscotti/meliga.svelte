@@ -35,7 +35,7 @@
   <button
     class="uk-button uk-button-primary carbut"
     id="Paste di meliga"
-    on:click={(event) => biscotti(event)}>Aggiungi al carrello</button
+    on:click={() => biscotti("Paste di meliga")}>Aggiungi al carrello</button
   >
 
   <h1>&nbsp;</h1>

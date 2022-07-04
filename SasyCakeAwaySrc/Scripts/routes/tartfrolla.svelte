@@ -37,7 +37,7 @@
   <button
     class="uk-button uk-button-primary carbut"
     id="Tartellette di frolla con crema"
-    on:click={(event) => biscotti(event)}>Aggiungi al carrello</button
+    on:click={() => biscotti("Tartellette di frolla con crema")}>Aggiungi al carrello</button
   >
 
   <h1>&nbsp;</h1>

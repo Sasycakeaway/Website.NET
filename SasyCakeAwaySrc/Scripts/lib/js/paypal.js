@@ -100,7 +100,7 @@ export async function init(
               purchase_units: [
                 {
                   amount: {
-                    value: 0.1,
+                    value: totale,
                   },
                 },
               ],

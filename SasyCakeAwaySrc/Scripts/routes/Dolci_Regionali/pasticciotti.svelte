@@ -35,7 +35,7 @@
   <button
     class="uk-button uk-button-primary carbut"
     id="Pasticciotti Leccesi"
-    on:click={(event) => pezzi(event)}>Aggiungi al carrello</button
+    on:click={() => pezzi("Pasticciotti Leccesi")}>Aggiungi al carrello</button
   >
   <h1>&nbsp;</h1>
   <!-- <p class="tit" style="color:rgb(195, 0, 255)">"Preparare dolci è molto più che saper eseguire ricette: è un vero e proprio gesto d’amore"</p> -->

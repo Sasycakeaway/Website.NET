@@ -2,9 +2,11 @@
   import { initcart } from "../../lib/js/cart";
   import { onMount } from "svelte";
   import Stepper from "../../lib/components/stepper.svelte";
+
   let cart = [];
   let verifica;
   let totale;
+
   function removeall() {
     cart = [];
     totale = 0;
@@ -12,6 +14,7 @@
     localStorage.setItem("totale", totale);
     verifica = check();
   }
+
   function check() {
     if (JSON.stringify(cart) == "[]") {
       return "{}";
@@ -19,18 +22,21 @@
       return JSON.stringify(cart);
     }
   }
+
   onMount(() => {
     cart = initcart();
     totale = localStorage.getItem("totale");
     verifica = check();
   });
+
   function min(e) {
-    cart[e.detail.text].qty--;
+    console.log(e);
     if (
       cart[e.detail.text].id != "Il trasformista" &&
       cart[e.detail.text].id != "Benvenuti al nord"
     ) {
       cart[e.detail.text].prezzo -= 5;
+      cart[e.detail.text].qty--;
       totale -= 5;
     } else {
       switch (cart[e.detail.text].id) {
@@ -54,29 +60,33 @@
       location.reload();
     }
   }
+
   function plu(e) {
+    cart[e.detail.text].prezzo += 5;
     cart[e.detail.text].qty++;
+    totale = parseInt(totale);
     totale += 5;
   }
+
   function bin(e) {
     let temp;
     cart.forEach((prod, i) => {
-      if (prod.id == e.path[0].id) {
+      if (prod.id == e) {
         temp = i;
       }
     });
     console.log(temp);
     console.log(cart[temp].prezzo);
     if (
-      e.path[0].id != "Il trasformista" &&
-      e.path[0].id != "Benvenuti al nord" &&
-      e.path[0].id != "Benvenuti al sud" &&
-      e.path[0].id != "Il vegetariano" &&
-      e.path[0].id != "La grande abbuffata"
+      e != "Il trasformista" &&
+      e != "Benvenuti al nord" &&
+      e != "Benvenuti al sud" &&
+      e != "Il vegetariano" &&
+      e != "La grande abbuffata"
     )
       totale -= cart[temp].prezzo;
     else {
-      switch (e.path[0].id) {
+      switch (e) {
         case "Benvenuti al nord":
           totale -= cart[temp].prezzo;
           break;
@@ -92,11 +102,11 @@
       }
     }
 
-    cart = cart.filter((prod) => prod.id != e.path[0].id);
+    cart = cart.filter((prod) => prod.id != e);
 
     localStorage.setItem("cart", JSON.stringify(cart));
     localStorage.setItem("totale", totale);
-    document.getElementById(e.path[0].id + "item");
+    document.getElementById(e + "item");
     location.reload();
   }
   let itemSize = 300;
@@ -117,9 +127,9 @@
 </svelte:head>
 <h1>&nbsp;</h1>
 {#if verifica == "{}"}
-  <p align="center">
+  <h1 align="center">
     Carrello vuoto, aggiungi prodotti al carrello visitando le pagine del sito
-  </p>
+  </h1>
 {:else}
   <div class="list">
     <ul class="list-group">
@@ -173,10 +183,11 @@
 
                     <div class="col center">
                       <img
+                        alt="cestino"
                         src="https://img.icons8.com/external-kosonicon-solid-kosonicon/48/000000/external-bin-cleaning-kosonicon-solid-kosonicon.png"
                         class="cestino"
                         id={prod.id}
-                        on:click={bin}
+                        on:click={() => bin(prod.id)}
                       />
                     </div>
                   </div>

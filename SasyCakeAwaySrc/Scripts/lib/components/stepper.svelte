@@ -11,10 +11,12 @@
   let cart = [];
   let totale;
   export let ida;
+
   onMount(() => {
     cart = initcart();
     totale = localStorage.getItem("totale");
   });
+
   function minus(e) {
     cart.forEach(async (value, i) => {
       if (value.id == prod) {
@@ -51,7 +53,6 @@
           }
 
           qty--;
-
           localStorage.setItem("cart", JSON.stringify(cart));
           localStorage.setItem("totale", totale);
           dispatch("minus", {
@@ -60,11 +61,8 @@
         } else {
           let resp = await dialogs.confirm("Vuoi eliminare il prodotto?");
           if (resp) {
-            console.log(prod);
-
-            console.log(cart);
-            document.getElementById(e.path[0].id + "item");
-            console.log(prod);
+          
+            document.getElementById(e + "item");
             if (
               prod != "Il trasformista" &&
               prod != "Benvenuti al nord" &&
@@ -112,7 +110,9 @@
       if (value.id == prod) {
         cart[i].qty++;
         qty++;
+        totale = parseInt(totale);
         totale += 5;
+        console.log(typeof(totale))
         localStorage.setItem("cart", JSON.stringify(cart));
         localStorage.setItem("totale", totale);
         dispatch("plus", {

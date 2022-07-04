@@ -16,7 +16,6 @@ export function pusha(ida, qty, prezzo) {
   for (var i = 0; i < cart.length; i++) {
     if (cart[i].id == ida) {
       count++;
-
       cart[i].qty = cart[i].qty + qty;
     }
   }
