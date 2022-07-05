@@ -44,9 +44,7 @@
       document.getElementById("conf").style.visibility = "hidden";
     } else alert("Compila tutti i campi richiesti");
   }
-  function citta(e){
-    cittavar = e.detail.place.formatted_address;
-  }
+
 </script>
 
 <svelte:head>
@@ -79,8 +77,13 @@
       />
       <br />
       <br />
-
-      <GooglePlacesAutocomplete apiKey="AIzaSyCcnkrkY74xBbIDf4UZdYH4bZwXaSvh1nM" styleClass="uk-input" on:placeChanged={citta} placeholder="Città"/>
+      <input
+        class="uk-input"
+        type="input"
+        placeholder="Città"
+        bind:value={cittavar}
+        id="map"
+      />
       <br />
       <br />
       <input
