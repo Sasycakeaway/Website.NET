@@ -29,11 +29,14 @@
     verifica = check();
   });
 
-  function min(e) {
-    console.log(e);
+  async function min(e) {
+    console.log(cart[e.detail.text].id)
     if (
       cart[e.detail.text].id != "Il trasformista" &&
       cart[e.detail.text].id != "Benvenuti al nord"
+      && cart[e.detail.text].id != "Benvenuti al sud" &&
+      cart[e.detail.text].id != "Il vegetariano" &&
+      cart[e.detail.text].id != "La grande abbuffata"
     ) {
       cart[e.detail.text].prezzo -= 5;
       cart[e.detail.text].qty--;
@@ -42,41 +45,82 @@
       switch (cart[e.detail.text].id) {
         case "Benvenuti al nord":
           cart[e.detail.text].prezzo -= 12;
+          cart[e.detail.text].qty--;
           totale -= 12;
           break;
         case "Il vegetariano":
           cart[e.detail.text].prezzo -= 12;
+          cart[e.detail.text].qty--;
           totale -= 12;
           break;
         case "Il trasformista":
           cart[e.detail.text].prezzo -= 18;
+          cart[e.detail.text].qty--;
           totale -= 18;
           break;
         default:
           cart[e.detail.text].prezzo -= 15;
+          cart[e.detail.text].qty--;
           totale -= 15;
           break;
       }
-      location.reload();
+      //location.reload();
     }
+    await localStorage.setItem("totale", totale.toString());
+    //location.reload();
   }
 
   function plu(e) {
-    cart[e.detail.text].prezzo += 5;
-    cart[e.detail.text].qty++;
+    console.log(cart[e.detail.text].id)
     totale = parseInt(totale);
-    totale += 5;
+    if (
+      cart[e.detail.text].id != "Il trasformista" &&
+      cart[e.detail.text].id != "Benvenuti al nord"
+      && cart[e.detail.text].id != "Benvenuti al sud" &&
+      cart[e.detail.text].id != "Il vegetariano" &&
+      cart[e.detail.text].id != "La grande abbuffata"
+    ) {
+      cart[e.detail.text].prezzo += 5;
+      cart[e.detail.text].qty++;
+      
+      totale += 5;
+    } else {
+      switch (cart[e.detail.text].id) {
+        case "Benvenuti al nord":
+        cart[e.detail.text].qty++;
+          cart[e.detail.text].prezzo += 12;
+          totale += 12;
+          break;
+        case "Il vegetariano":
+          cart[e.detail.text].qty++;
+          cart[e.detail.text].prezzo += 12;
+          totale += 12;
+          break;
+        case "Il trasformista":
+          cart[e.detail.text].qty++;
+          cart[e.detail.text].prezzo += 18;
+          totale += 18;
+          break;
+        default:
+          cart[e.detail.text].qty++;
+          cart[e.detail.text].prezzo += 15;
+          totale += 15;
+          break;
+      }
+      //location.reload();
+    }
+    // localStorage.setItem("cart", JSON.stringify(cart));
+    // localStorage.setItem("totale", totale.toString());
   }
 
   function bin(e) {
+    
     let temp;
     cart.forEach((prod, i) => {
       if (prod.id == e) {
         temp = i;
       }
     });
-    console.log(temp);
-    console.log(cart[temp].prezzo);
     if (
       e != "Il trasformista" &&
       e != "Benvenuti al nord" &&
@@ -105,7 +149,7 @@
     cart = cart.filter((prod) => prod.id != e);
 
     localStorage.setItem("cart", JSON.stringify(cart));
-    localStorage.setItem("totale", totale);
+    localStorage.setItem("totale", totale.toString());
     document.getElementById(e + "item");
     location.reload();
   }

@@ -51,10 +51,7 @@
                 break;
             }
           }
-
           qty--;
-          localStorage.setItem("cart", JSON.stringify(cart));
-          localStorage.setItem("totale", totale);
           dispatch("minus", {
             text: ida,
           });
@@ -62,7 +59,7 @@
           let resp = await dialogs.confirm("Vuoi eliminare il prodotto?");
           if (resp) {
           
-            document.getElementById(e + "item");
+            // document.getElementById(e + "item").removeChild();
             if (
               prod != "Il trasformista" &&
               prod != "Benvenuti al nord" &&
@@ -93,12 +90,11 @@
               }
             }
             cart.splice(i, 1);
-            localStorage.setItem("cart", JSON.stringify(cart));
-            localStorage.setItem("totale", totale);
             dispatch("minus", {
               text: ida,
             });
           }
+          localStorage.setItem("cart", JSON.stringify(cart));
           location.reload();
         }
       }
