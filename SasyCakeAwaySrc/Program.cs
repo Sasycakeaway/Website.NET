@@ -87,7 +87,5 @@ if (hostEnvironment != null)
   
 }
 
-var sAttr = ConfigurationManager.AppSettings.Get("Key0");
-Console.WriteLine("The value of Key0 is " + sAttr);
 
 app.Run();
