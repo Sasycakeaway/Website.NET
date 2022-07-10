@@ -2,7 +2,7 @@
 </script>
 
 <div
-  class="uk-position-relative uk-visible-toggle uk-light"
+  class="uk-position-relative uk-visible-toggle uk-dark"
   tabindex="-1"
   uk-slideshow="min-height: 300; max-height: 600; animation: push"
 >

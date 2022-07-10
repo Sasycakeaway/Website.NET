@@ -22,7 +22,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img src="//images/Paste di meliga.jpg" class="cardimg" alt="" />
+            <img src="/images/Paste di meliga.jpg" class="cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -141,7 +141,7 @@
             </p>
           </div>
           <div class="uk-card-media-bottom">
-            <img src="//images/cantucci.jpeg" class="cardimg" alt="" />
+            <img src="/images/cantucci.jpeg" class="cardimg" alt="" />
           </div>
         </div>
       </div>
@@ -214,7 +214,7 @@
           </div>
 
           <div class="uk-card-media-bottom">
-            <img class="cardimg" src="//images/Assabesi.jpg" alt="" />
+            <img class="cardimg" src="/images/Assabesi.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -265,7 +265,7 @@
           <div class="uk-card-media-bottom">
             <img
               class="acc"
-              src="//images/Diamantini.jpg"
+              src="/images/Diamantini.jpg"
               alt=""
               width="512px"
             />

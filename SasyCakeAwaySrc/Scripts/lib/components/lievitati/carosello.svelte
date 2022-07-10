@@ -3,7 +3,7 @@
     src="https://cdn.jsdelivr.net/npm/uikit@3.13.7/dist/js/components/slideshow.min.js"></script>
 </svelte:head>
 <div
-  class="uk-position-relative uk-visible-toggle uk-light"
+  class="uk-position-relative uk-visible-toggle uk-dark"
   tabindex="-1"
   uk-slideshow="autoplay: true"
   align="center"

@@ -11,7 +11,7 @@
             <div class="uk-card-media-top" align="center">
               <h6>&nbsp;</h6>
               <img
-                src="https://img.icons8.com/windows/128/a449e3/--biscuits.png"
+                src="https://img.icons8.com/windows/128/682bad/--biscuits.png"
               />
             </div>
             <div class="uk-card-body" align="center">
@@ -42,7 +42,7 @@
           >
             <div class="uk-card-media-top" align="center">
               <h6>&nbsp;</h6>
-              <img src="https://img.icons8.com/ios/128/a449e3/bee--v1.png" />
+              <img src="https://img.icons8.com/ios/128/682bad/bee--v1.png" />
             </div>
             <div class="uk-card-body" align="center">
               <h3 class="uk-card-title">Apebox</h3>
@@ -72,7 +72,7 @@
             <div class="uk-card-media-top" align="center">
               <h6>&nbsp;</h6>
               <img
-                src="https://img.icons8.com/ios/128/a449e3/birthday-cake--v1.png"
+                src="https://img.icons8.com/ios/128/682bad/birthday-cake--v1.png"
               />
             </div>
             <div class="uk-card-body " align="center">
@@ -100,7 +100,7 @@
           <div class="uk-card-media-top" align="center">
             <h6>&nbsp;</h6>
             <img
-              src="https://img.icons8.com/external-icongeek26-outline-icongeek26/128/a449e3/external-panettone-italian-food-icongeek26-outline-icongeek26.png"
+              src="https://img.icons8.com/external-icongeek26-outline-icongeek26/128/682bad/external-panettone-italian-food-icongeek26-outline-icongeek26.png"
             />
           </div>
           <div class="uk-card-body" align="center">

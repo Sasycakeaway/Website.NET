@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 /* devanagari */
 @font-face {
   font-family: "Poppins";
@@ -135,15 +136,14 @@
     U+FEFF, U+FFFD;
 }
 .det {
-  font-size: 17px;
+  font-size: 18px;
   font-family: "Poppins", sans-serif;
-  font-style: regular;
+  font-style:normal;
   color: black;
 }
 .tit {
-  font-size: 30px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-size: 40px;
+  font-family: 'Abel', sans-serif;    margin-bottom: 80px;
 }
 .testo {
   width: 70%;
@@ -155,7 +155,10 @@
   padding: 10px;
 }
 .cardone {
-  background-color: #b96563;
+  background-color: transparent;
+  border-color: transparent;
+  border: 0px transparent solid;
+
 }
 .imgcenter {
   display: block;

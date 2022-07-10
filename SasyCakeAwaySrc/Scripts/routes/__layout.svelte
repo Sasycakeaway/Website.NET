@@ -48,14 +48,27 @@
   />
   <script
     src="https://cdn.jsdelivr.net/npm/uikit@3.13.7/dist/js/uikit-core.min.js"></script>
+    <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PRD2VH2');</script>
+  <!-- End Google Tag Manager -->
+  <script src="https://www.googleoptimize.com/optimize.js?id=GTM-KMRMVZC"></script>
 </svelte:head>
 
 <Header />
 
-<main>
-  <slot />
-</main>
-
+<body>
+  <main>
+    <slot />
+  </main>
+</body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRD2VH2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 <footer>
   <p class="titindirizzo">Mi trovi in Viale falchera 69</p>
   <p style="color: white;">Seguici su Instagram e Facebook</p>
@@ -94,5 +107,8 @@
 
   footer a {
     font-weight: bold;
+  }
+  .uk-position-relative{
+    color: black;
   }
 </style>

@@ -22,14 +22,18 @@
   </p>
 </div>
 <h1>&nbsp;</h1>
-<div class="uk-child-width-expand@s uk-text-center foto uk-flex uk-flex-center" uk-grid align="center">
+<div class="uk-child-width-expand@s uk-text-center foto uk-flex uk-flex-center" uk-grid align="center" uk-lightbox>
   <center>
-  <div>
-    <img src="/images/renna.jpg" width="512px" />
+  <div uk-lightbox>
+    <a href="/images/renna.jpg">
+      <img src="/images/renna.jpg" width="512px" data-caption="Renna" alt="Foto renna"/>
+    </a>
   </div>
   <br/>
-  <div>
-    <img src="/images/biscotti.jpg" width="512px" />
+  <div uk-lightbox>
+    <a href="/images/renna.jpg">
+      <img src="/images/biscotti.jpg" width="512px" data-caption="Biscotti" alt="Foto biscotti"/>
+    </a>
   </div>
 </center>
 </div>
