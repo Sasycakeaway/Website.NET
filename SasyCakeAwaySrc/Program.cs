@@ -17,7 +17,7 @@ builder.Services.AddRazorPages();
 builder.Services.ConfigureNodejsService();
 builder.Services.Configure<ForwardedHeadersOptions>(options =>
 {
-    options.KnownProxies.Add(IPAddress.Parse("192.168.1.100"));
+    options.KnownProxies.Add(IPAddress.Parse("149.102.141.1"));
 });
 var app = builder.Build();
 
