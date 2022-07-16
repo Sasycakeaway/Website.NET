@@ -1,4 +1,7 @@
 <script>
+  import 'uikit/dist/css/uikit.css';
+  import 'uikit/dist/js/uikit.js';
+  import 'uikit/dist/js/uikit-icons.js';
   import Header from "$lib/header/Header.svelte";
   import "./app.css";
   import { initializeApp } from "firebase/app";
@@ -42,12 +45,6 @@
 
 <svelte:head>
   <link rel="stylesheet" href="/css/footer.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/uikit@3.13.7/dist/css/uikit.min.css"
-  />
-  <script
-    src="https://cdn.jsdelivr.net/npm/uikit@3.13.7/dist/js/uikit-core.min.js"></script>
     <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
