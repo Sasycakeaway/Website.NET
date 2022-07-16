@@ -7,9 +7,9 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<h1>&nbsp;</h1>
+<br/>
 <h1 class="tit">Assabesi</h1>
-<h1>&nbsp;</h1>
+<br/>
 <div class="" align="center">
   <div class="uk-card uk-card-default" id="card">
     <hr />
@@ -35,20 +35,20 @@
     </div>
   </div>
 
-  <h1>&nbsp;</h1>
+  <br/>
   <button
     class="uk-button uk-button-primary carbut"
     id="Assabesi"
     on:click={() => biscotti("Assabesi")}>Aggiungi al carrello</button
   >
-  <h1>&nbsp;</h1>
+  <br/>
   <div class="testo">
-    <p class="tit" style="color:rgb(195, 0, 255)">
+    <p class="citprod" style="color:rgb(195, 0, 255)">
       "Gli Assabesi, un frollino dal nome esotico, dal cuore di panna e
       cioccolato."
     </p>
   </div>
-  <h1>&nbsp;</h1>
+  <br/>
 </div>
 
 <style>

@@ -7,7 +7,7 @@
 </svelte:head>
 
 <h1>Biscotti Decorati</h1>
-<h1>&nbsp;</h1>
+<br/>
 <div align="center">
   <p class="parag">
     Vuoi fare un regalo originale per un'occasione particolare? Un San Valentino
@@ -21,7 +21,7 @@
     con gusto prima di regalarli.
   </p>
 </div>
-<h1>&nbsp;</h1>
+<br/>
 <div class="uk-child-width-expand@s uk-text-center foto uk-flex uk-flex-center" uk-grid align="center" uk-lightbox>
   <center>
   <div uk-lightbox>
@@ -38,7 +38,7 @@
 </center>
 </div>
 
-<h1>&nbsp;</h1>
+<br/>
 <div align="center">
   <p class="parag">
     Se invece vuoi un regalo tradizionale, per un segnaposto o per una occasione
@@ -54,6 +54,6 @@
     commensali.
   </p>
 </div>
-<h1>&nbsp;</h1>
+<br/>
 <Slide />
-<h1>&nbsp;</h1>
+<br/>

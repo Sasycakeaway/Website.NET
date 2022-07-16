@@ -7,9 +7,9 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<h1>&nbsp;</h1>
+<br/>
 <h1 class="tit">Tartellette di frolla con crema e frutta</h1>
-<h1>&nbsp;</h1>
+<br/>
 <div class="" align="center">
   <div class="uk-card uk-card-default" id="card">
     <br />
@@ -33,16 +33,16 @@
       </div>
     </div>
   </div>
-  <h1>&nbsp;</h1>
+  <br/>
   <button
     class="uk-button uk-button-primary carbut"
     id="Tartellette di frolla con crema"
     on:click={() => biscotti("Tartellette di frolla con crema")}>Aggiungi al carrello</button
   >
 
-  <h1>&nbsp;</h1>
+  <br/>
   <div class="testo">
-    <p class="tit" style="color:rgb(195, 0, 255)">
+    <p class="citprod" style="color:rgb(195, 0, 255)">
       "E qui si scatena la mia fantasia negli accostamenti tra creme e frutta
       per creare delle piccole opere d'arte"
     </p>

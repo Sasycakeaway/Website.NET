@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte";
   import { dialogs } from "svelte-dialogs";
   let id;
   function requestRestore() {
@@ -21,12 +22,17 @@
         console.error(error);
       });
   }
+  onMount(() => {
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      document.getElementById("form").classList = "uk-card uk-card-default uk-card-body uk-width-1-2@m formatel"
+    }
+  });
 </script>
 
 <svelte:head>
   <link rel="stylesheet" href="/css/login.css" />
 </svelte:head>
-<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m forma">
+<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m forma" id="form">
   <fieldset class="uk-fieldset">
     <div align="center">
       <legend class="uk-legend">Sasy's Cake Away login</legend>
@@ -51,4 +57,4 @@
     </div>
   </fieldset>
 </div>
-<h1>&nbsp;</h1>
+<br/>

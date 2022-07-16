@@ -117,4 +117,4 @@
 </div>
 
 <div id="paypal" align="center" />
-<h1>&nbsp;</h1>
+<br/>

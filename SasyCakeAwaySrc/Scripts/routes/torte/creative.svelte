@@ -14,9 +14,9 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<h1>&nbsp;</h1>
+<br/>
 <h1 class="tit">Crostata creativa</h1>
-<h1>&nbsp;</h1>
+<br/>
 <div class="s" align="center">
   <div class="uk-card uk-card-default" id="card">
     <hr />
@@ -36,8 +36,8 @@
     </div>
   </div>
 
-  <h1>&nbsp;</h1>
-  <p class="tit" style="color:rgb(195, 0, 255)">
+  <br/>
+  <p class="citprod" style="color:rgb(195, 0, 255)">
     "Con le crostate creative libero la fantasia senza rinunciare ai sapori
     tradizionali di frolla, frutti o creme. Per chi non ama la sugar paste è una
     ottima soluzione!"

@@ -60,6 +60,9 @@
   }
   onMount(() => {
     emailjs.init("tfSXJVz0VLhWR2I_5");
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      document.getElementById("form").classList = "uk-card uk-card-default uk-card-body uk-width-1-2@m formatel"
+    }
   });
 </script>
 
@@ -67,8 +70,7 @@
   <link rel="stylesheet" href="/css/login.css" />
 </svelte:head>
 <br />
-<div align="center">
-  <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m forma">
+  <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m forma" id="form">
     <fieldset class="uk-fieldset">
       <div align="center">
         <legend class="uk-legend"
@@ -147,5 +149,4 @@
       </div>
     </fieldset>
   </div>
-</div>
 <br />

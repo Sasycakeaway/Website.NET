@@ -7,9 +7,9 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<h1>&nbsp;</h1>
+<br/>
 <h1 class="tit">Meringhe</h1>
-<h1>&nbsp;</h1>
+<br/>
 <div class="" align="center">
   <div class="uk-card uk-card-default" id="card">
     <hr />
@@ -33,15 +33,15 @@
     </div>
   </div>
 
-  <h1>&nbsp;</h1>
+  <br/>
   <button
     class="uk-button uk-button-primary carbut"
     id="Meringhe"
     on:click={() => biscotti("Meringhe")}>Aggiungi al carrello</button
   >
-  <h1>&nbsp;</h1>
+  <br/>
   <div class="testo">
-    <p class="tit" style="color:rgb(195, 0, 255)">
+    <p class="citprod" style="color:rgb(195, 0, 255)">
       "E la meringa un giorno si sposò con la panna montata: uno dei matrimoni
       più riusciti e duraturi della pasticceria europea!"
     </p>

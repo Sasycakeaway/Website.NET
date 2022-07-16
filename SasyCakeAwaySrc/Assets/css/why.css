@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-/* devanagari */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap');
 @font-face {
   font-family: "Poppins";
   font-style: italic;
@@ -143,7 +143,8 @@
 }
 .tit {
   font-size: 40px;
-  font-family: 'Abel', sans-serif;    margin-bottom: 80px;
+  font-weight: 500;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .testo {
   width: 70%;
@@ -161,10 +162,9 @@
 
 }
 .imgcenter {
+  border-radius: 7%;
+  padding: 10px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
 }
 * {
   border-radius: 8px;
@@ -180,4 +180,10 @@
   overflow: hidden;
   width: 860px;
   /* position: absolute; */
+}
+.citprod {
+  font-size: 40px;
+  font-family: 'Abel', sans-serif;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }

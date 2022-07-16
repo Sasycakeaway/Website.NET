@@ -9,9 +9,9 @@
 </svelte:head>
 
 <Head />
-<h1>&nbsp;</h1>
+<br/>
 <Item />
-<h1>&nbsp;</h1>
+<br/>
 <p class="inform">
   * I biscotti sono prodotti da Sasy's e potete scegliere tra i cavalli
   battaglia: PASTE DI MELIGA, BACI DI DAMA, DIAMANTINI AL CACAO, FROLLINI LIMONE
@@ -26,7 +26,7 @@
     target="_blank">MAMMACREATIVA</a
   >
 </p>
-<h1>&nbsp;</h1>
+<br/>
 
 <div align="center">
   <a href="mailto:sasy.vitrani@gmail.com"
@@ -52,7 +52,7 @@
   </ul>
 </div>
 
-<h1>&nbsp;</h1>
+<br/>
 
 <style>
 </style>

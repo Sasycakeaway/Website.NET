@@ -14,9 +14,9 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<h1>&nbsp;</h1>
+<br/>
 <h1 class="tit">Torta meringata</h1>
-<h1>&nbsp;</h1>
+<br/>
 <div class="" align="center">
   <div class="uk-card uk-card-default">
     <hr />
@@ -36,8 +36,8 @@
     </div>
   </div>
 
-  <h1>&nbsp;</h1>
-  <p class="tit" style="color:rgb(195, 0, 255)">
+  <br/>
+  <p class="citprod" style="color:rgb(195, 0, 255)">
     "Chi ha detto che un matrimonio a tre non possa funzionare? Panna, fragola e
     meringhe si sposano benissimo, e senza alcuna gelosia!"
   </p>

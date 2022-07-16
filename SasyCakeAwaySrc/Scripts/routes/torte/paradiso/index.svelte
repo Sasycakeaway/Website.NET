@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="/css/fresca.css" />
   <link rel="stylesheet" href="/css/cardtorte.css" />
 </svelte:head>
-<h1>&nbsp;</h1>
+<br/>
 <Head />
-<h1>&nbsp;</h1>
+<br/>
 
 <div class="tot">
   <div
@@ -306,4 +306,4 @@
     </div>
   </div>
 </div>
-<h1>&nbsp;</h1>
+<br/>

@@ -7,9 +7,9 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<h1>&nbsp;</h1>
+<br/>
 <h1 class="tit">Paste di Meliga - Paste 'd melia</h1>
-<h1>&nbsp;</h1>
+<br/>
 <div class="" align="center">
   <div class="uk-card uk-card-default " id="card">
     <br />
@@ -31,16 +31,16 @@
     </div>
   </div>
 
-  <h1>&nbsp;</h1>
+  <br/>
   <button
     class="uk-button uk-button-primary carbut"
     id="Paste di meliga"
     on:click={() => biscotti("Paste di meliga")}>Aggiungi al carrello</button
   >
 
-  <h1>&nbsp;</h1>
+  <br/>
   <div class="testo">
-    <p class="tit" style="color:rgb(195, 0, 255)">
+    <p class="citprod" style="color:rgb(195, 0, 255)">
       "Inzuppati in un buon bicchiere di vino passito o di moscato,
       difficilmente riuscirai più a farne a meno!"
     </p>

@@ -7,9 +7,9 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<h1>&nbsp;</h1>
+<br/>
 <h1 class="tit">Canestrelli</h1>
-<h1>&nbsp;</h1>
+<br/>
 <div class="" align="center">
   <div class="uk-card uk-card-default" id="card">
     <hr />
@@ -28,15 +28,15 @@
     </div>
   </div>
 
-  <h1>&nbsp;</h1>
+  <br/>
   <button
     class="uk-button uk-button-primary carbut"
     id="Canestrelli"
     on:click={() => biscotti("Canestrelli")}>Aggiungi al carrello</button
   >
-  <h1>&nbsp;</h1>
+  <br/>
   <div class="testo" />
-  <h1>&nbsp;</h1>
+  <br/>
 </div>
 
 <style>

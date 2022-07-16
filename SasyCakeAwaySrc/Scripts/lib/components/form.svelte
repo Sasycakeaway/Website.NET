@@ -5,7 +5,7 @@
         >Per informazioni compila il modulo sottostante</legend
       >
     </div>
-    <h1>&nbsp;</h1>
+    <br/>
     <div class="uk-margin">
       <p>Nome:</p>
       <input class="uk-input" type="Nome" placeholder="Nome" />

@@ -18,7 +18,7 @@
     style="background-image: url(/images/head.jpg)"
   >
     <div id="pric" class="uk-container sezione but cardc uk-width-xlarge">
-      <h3>&nbsp;</h3>
+      <br/>
 
       <div align="center">
         <p class="titolo ">

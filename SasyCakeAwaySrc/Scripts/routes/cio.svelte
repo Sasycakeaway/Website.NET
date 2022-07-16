@@ -7,9 +7,9 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<h1>&nbsp;</h1>
+<br/>
 <h1 class="tit">Bicchierini di cioccolato riempiti con creme a scelta</h1>
-<h1>&nbsp;</h1>
+<br/>
 <div class="" align="center">
   <div class="uk-card uk-card-default" id="card">
     <!-- <div class="uk-card-media-left uk-cover-container">
@@ -42,21 +42,21 @@
     </div>
   </div>
 
-  <h1>&nbsp;</h1>
+  <br/>
   <button
     class="uk-button uk-button-primary carbut"
     id="Bicchierini al cioccolato"
     on:click={() => biscotti("Bicchierini al cioccolato")}>Aggiungi al carrello</button
   >
-  <h1>&nbsp;</h1>
+  <br/>
   <div class="testo">
-    <p class="tit" style="color:rgb(195, 0, 255)">
+    <p class="citprod" style="color:rgb(195, 0, 255)">
       "Da ragazza sono rimasta folgorata da questi pasticcini atipici. Memore di
       quel gusto unico, ho voluto riprodurre questa specialità particolarmente
       golosa"
     </p>
   </div>
-  <h1>&nbsp;</h1>
+  <br/>
 </div>
 
 <style>

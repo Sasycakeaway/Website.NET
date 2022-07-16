@@ -8,7 +8,7 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<h1>&nbsp;</h1>
+<br/>
 <div
   class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin cardone"
   uk-grid

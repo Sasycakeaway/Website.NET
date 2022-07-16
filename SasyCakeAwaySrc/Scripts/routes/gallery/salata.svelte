@@ -4,7 +4,7 @@
   import { dialogs } from "svelte-dialogs";
 </script>
 
-<h1>&nbsp;</h1>
+<br/>
 <div class="gallo">
   <Gallery>
     on:click={(event) =>
@@ -21,7 +21,7 @@
     {/each}
   </Gallery>
 </div>
-<h1>&nbsp;</h1>
+<br/>
 
 <style>
   .gallo {

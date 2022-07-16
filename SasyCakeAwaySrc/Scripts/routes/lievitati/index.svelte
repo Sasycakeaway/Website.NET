@@ -7,13 +7,13 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/lievitati.css" />
 </svelte:head>
-<h1>&nbsp;</h1>
+<br/>
 <Head />
-<h1>&nbsp;</h1>
+<br/>
 <div align="center">
   <h3>Panettone e Colomba artigianale</h3>
 </div>
-<h1>&nbsp;</h1>
+<br/>
 <div align="center">
   <p class="para">
     Difficile rinunciare a questi dolci tradizionali che caratterizzano due
@@ -39,7 +39,7 @@
     >.
   </p>
 </div>
-<h1>&nbsp;</h1>
+<br/>
 <Carousell />
 
-<h1>&nbsp;</h1>
+<br/>

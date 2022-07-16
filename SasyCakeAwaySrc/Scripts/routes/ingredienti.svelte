@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/css/index.css" />
 </svelte:head>
 {#if ingredienti == false}
-<h1>&nbsp;</h1>
+<br/>
 <div align="center">
   <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m infor">
     <h3 class="uk-card-title">
@@ -31,7 +31,7 @@
     >
   </div>
 </div>
-<h1>&nbsp;</h1>
+<br/>
 {:else}
 <PdfViewer url="/elenco_ingredienti.pdf" scale="1.5"/>
 <br/>

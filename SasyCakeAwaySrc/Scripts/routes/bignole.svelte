@@ -7,9 +7,9 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<h1>&nbsp;</h1>
+<br>
 <h1 class="tit">Bignole e Chantilly artigianali con creme a scelta</h1>
-<h1>&nbsp;</h1>
+<br/>
 <div align="center">
   <div class="uk-card uk-card-default " id="card">
     <br />
@@ -30,15 +30,15 @@
       </div>
     </div>
   </div>
-  <h3>&nbsp;</h3>
+  <br/>
   <button
     class="uk-button uk-button-primary carbut"
     id="Bignole"
     on:click={() => biscotti("Bignole")}>Aggiungi al carrello</button
   >
-  <h1>&nbsp;</h1>
+  <br/>
   <div class="testo">
-    <p class="tit" style="color:rgb(195, 0, 255)">
+    <p class="citprod" style="color:rgb(195, 0, 255)">
       "Preparare dolci è molto più che saper eseguire ricette: è un vero e
       proprio gesto d’amore"
     </p>

@@ -2,10 +2,10 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<h1>&nbsp;</h1>
+<br/>
 <h1>Work in progress</h1>
 <!--<h1 class="tit">Baci di Dama</h1>
-    <h1>&nbsp;</h1>
+    <br/>
     <div class="divv" align="center">
     <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
         <div class="uk-card-media-left uk-cover-container">
@@ -21,8 +21,8 @@
         </div>
     </div>
     
-    <h1>&nbsp;</h1>
-    <p class="tit" style="color:rgb(195, 0, 255)">"Dammi mille baci, poi cento, poi ancora mille, poi di nuovo cento.... un bacio tira l'altro!"</p>
+    <br/>
+    <p class="citprod" style="color:rgb(195, 0, 255)">"Dammi mille baci, poi cento, poi ancora mille, poi di nuovo cento.... un bacio tira l'altro!"</p>
   
 
 </div>-->

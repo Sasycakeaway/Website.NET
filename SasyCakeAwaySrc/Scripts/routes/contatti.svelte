@@ -45,9 +45,9 @@
     href="https://unpkg.com/purecss@2.1.0/build/grids-responsive-min.css"
   />
 </svelte:head>
-<h1>&nbsp;</h1>
+<br/>
 <h1>Contattaci per avere informazioni sui nostri prodotti o per fare ordini</h1>
-<h1>&nbsp;</h1>
+<br/>
   <div class="contatti">
     <fieldset class="contatti">
       <div class="uk-margin">
@@ -131,4 +131,4 @@
 
  
 </section> -->
-<h1>&nbsp;</h1>
+<br/>

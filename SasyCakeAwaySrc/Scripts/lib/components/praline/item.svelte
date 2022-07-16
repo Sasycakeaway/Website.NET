@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/praline.css" />
 <h1 style="color:#e93657;" class="titc">Praline d' autore</h1>
-<h1>&nbsp;</h1>
+<br/>
 <p class="testoc">
   In questi giorni di Lock Down &eacute; maturata un'idea. Perch&eacute; non
   provare a inventarsi qualcosa di nuovo e di particolare? Ecco la scintilla
@@ -14,7 +14,7 @@
   rigorosamente da gustare assieme, leggendo una poesia con un brano musicale di
   sottofondo. Un modo inusuale e originale per dirsi Ti amo!
 </p>
-<h1>&nbsp;</h1>
+<br/>
 <div align="center">
   <a href="mailto:sasy.vitrani@gmail.com"
     ><button class="uk-button uk-button-primary uk-button-large but"

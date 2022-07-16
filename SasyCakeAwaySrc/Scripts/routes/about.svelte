@@ -10,7 +10,7 @@
       </div>
       <div class="timeline-content">
         <img src="https://sasyimg.imgix.net/profilo.jpg" class="img" />
-        <h1>&nbsp;</h1>
+        <br/>
         <p>
           Eccomi qui, sono Sabrina ma da sempre, per tutti, sono Sasy. Mamma di
           tre splendidi ragazzi: Matteo, Francesca e Andrea, e moglie
@@ -45,7 +45,7 @@
       </div>
       <div class="timeline-content">
         <img src="https://sasyimg.imgix.net/iad.png" class="img" />
-        <h1>&nbsp;</h1>
+        <br/>
         <p>
           Ma i sogni alle volte si avverano. All'inizio del 2019, finalmente si
           possono aprire le IAD utilizzando la sola cucina di casa. Sono
@@ -65,7 +65,7 @@
       </div>
       <div class="timeline-content">
         <img src="https://sasyimg.imgix.net/corsi.jpg" class="img" />
-        <h1>&nbsp;</h1>
+        <br/>
         <p>
           Per affrontare questo percorso mi sono preparata cercando di unire i
           doni di natura agli insegnamenti di mia mamma. Ma soprattutto ho
@@ -85,7 +85,7 @@
       </div>
       <div class="timeline-content">
         <img src="https://sasyimg.imgix.net/tu.jpg" class="img" />
-        <h1>&nbsp;</h1>
+        <br/>
         <p>
           Vieni a trovarmi nel mio laboratorio in Viale Falchera 69, ti farò
           entrare nel mio mondo e ti farò gustare qualcuna delle mie
