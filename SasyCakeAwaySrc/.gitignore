@@ -11,3 +11,4 @@ PublishProfiles/
 bin/
 obj/
 app.config
+.vs

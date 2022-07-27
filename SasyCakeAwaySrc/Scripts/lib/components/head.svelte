@@ -17,7 +17,7 @@
     class="uk-section uk-light uk-background-cover but "
     style="background-image: url(/images/head.jpg)"
   >
-    <div id="pric" class="uk-container sezione but cardc uk-width-xlarge">
+    <div id="pric" class="uk-container sezione but cardc uk-width-xlarge margine">
       <br/>
 
       <div align="center">
@@ -35,3 +35,9 @@
     </div>
   </div>
 </div>
+
+<style>
+  .margine{
+    margin-left: 50px;
+  }
+</style>
