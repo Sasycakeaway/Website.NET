@@ -3,9 +3,11 @@
   import md5 from "md5";
   const ENDPOINT = "/api/login";
   import { dialogs } from "svelte-dialogs";
+  import Fa from 'svelte-fa/src/fa.svelte';
+  import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons/index.es';
   var user;
   var pass;
-
+  let show = false;
   onMount(() => {
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
       document.getElementById("form").classList = "uk-card uk-card-default uk-card-body uk-width-1-2@m formatel"
@@ -73,6 +75,14 @@
         );
       });
   }
+  function showfn(){
+    show = !show;
+    if(show){
+      document.getElementById("pass").type = "text";
+    }else{
+      document.getElementById("pass").type = "password";
+    }
+  }
 </script>
 
 <svelte:head>
@@ -97,7 +107,16 @@
         type="password"
         placeholder="Password"
         bind:value={pass}
+        id="pass"
       />
+      <button class="uk-form-icon uk-form-icon-flip icon" on:click={showfn}>
+        {#if show == false}
+          <Fa icon={faEye}></Fa>
+        {:else}
+          <Fa icon={faEyeSlash}></Fa>
+        {/if}
+      </button>
+
     </div>
     <div class="uk-margin">
       <center>
@@ -122,3 +141,12 @@
   </fieldset>
 </div>
 <br/>
+
+<style>
+  .icon{
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 0px;
+  }
+</style>

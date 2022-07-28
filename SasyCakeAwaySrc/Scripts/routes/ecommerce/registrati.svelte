@@ -5,19 +5,23 @@
   import emailjs from "@emailjs/browser";
   import { onMount } from "svelte";
   import * as CodiceFiscaleUtils from '@marketto/codice-fiscale-utils';
-  import { Circle2 } from 'svelte-loading-spinners'
+  import { Circle2 } from 'svelte-loading-spinners';
+  import Fa from 'svelte-fa/src/fa.svelte';
+  import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons/index.es';
   let buttonpress = false;
   var user,
     pass,
     passcheck,
     nascita,
     cf,
-    telefono;
+    telefono,
+    show = false,
+    showcheck = false;
   function registrati() {
     buttonpress = true;
     let regDate = new Date();
     let isodate = regDate.toISOString().split('T')[0];
-    if (pass == passcheck && CodiceFiscaleUtils.Validator.codiceFiscale(cf).valid) {
+    if (pass == passcheck && CodiceFiscaleUtils.Validator.codiceFiscale(cf).valid && user != undefined && user != "" && nascita != undefined && nascita != "" && telefono != undefined && telefono != "" && telefono.length == 9) {
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
@@ -55,6 +59,7 @@
           );
         });
     } else {
+      buttonpress = false;
       dialogs.alert("Le password non corrispondono o il codice fiscale non è corretto");
   }
   }
@@ -64,6 +69,22 @@
       document.getElementById("form").classList = "uk-card uk-card-default uk-card-body uk-width-1-2@m formatel"
     }
   });
+  function showfn(){
+    show = !show;
+    if(show){
+      document.getElementById("pass").type = "text";
+    }else{
+      document.getElementById("pass").type = "password";
+    }
+  }
+  function showfncheck(){
+    showcheck = !showcheck;
+    if(showcheck){
+      document.getElementById("passcheck").type = "text";
+    }else{
+      document.getElementById("passcheck").type = "password";
+    }
+  }
 </script>
 
 <svelte:head>
@@ -88,28 +109,42 @@
       </div>
       <div class="uk-margin">
         <input
-          id="password"
+          id="pass"
           class="uk-input"
           type="password"
           placeholder="Password"
           bind:value={pass}
         />
+        <button class="icon" on:click={showfn}>
+          {#if show == false}
+            <Fa icon={faEye}></Fa>
+          {:else}
+            <Fa icon={faEyeSlash}></Fa>
+          {/if}
+        </button>
       </div>
       <div class="uk-margin">
         <input
-          id="password2"
+          id="passcheck"
           class="uk-input"
           type="password"
           placeholder="Conferma la Password"
           bind:value={passcheck}
         />
+        <button class="icon" on:click={showfncheck}>
+          {#if showcheck == false}
+            <Fa icon={faEye}></Fa>
+          {:else}
+            <Fa icon={faEyeSlash}></Fa>
+          {/if}
+        </button>
       </div>
       <div class="uk-margin">
         <input
           id="telefono"
           class="uk-input"
           type="text"
-          placeholder="Numbero di telefono"
+          placeholder="Numero di telefono"
           bind:value={telefono}
         />
       </div>
@@ -150,3 +185,15 @@
     </fieldset>
   </div>
 <br />
+
+<style>
+  .icon{
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 0px;
+  }
+  .iconcheck{
+    margin-top: 100px;
+  }
+</style>
