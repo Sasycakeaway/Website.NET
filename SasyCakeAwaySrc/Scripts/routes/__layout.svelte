@@ -7,6 +7,15 @@
   import { onMount } from "svelte";
   import { dialogs } from "svelte-dialogs";
   onMount(() => {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)
+    ) {
+      document.getElementById("text").style.paddingTop = "200px";
+      document.getElementById("text").style.paddingLeft = "75px";
+      document.getElementById("social").style.paddingLeft = "5px";
+      document.getElementById("socialimg").style.paddingLeft = "30px";
+
+    }
     dialogs.config({
       global: {
         closeButtonText: "close me",
@@ -38,15 +47,17 @@
     <slot />
   </main>
 </body>
-<footer>
-  <p class="titindirizzo">
-    Mi trovi in Viale falchera 69 - <a href="/Sasy - Privacy - 2022.pdf"
+<footer >
+
+  <p class="titindirizzo uk-align-center" id="text">
+    Mi trovi in Viale falchera 69 <br/> <a href="/Sasy - Privacy - 2022.pdf"
       >Informativa sulla privacy</a
     >
   </p>
-  <p style="color: black;">Seguici su Instagram e Facebook</p>
+  
+  <p style="color: black" id="social">Seguici su Instagram e Facebook</p>
   <div uk-grid>
-    <div>
+    <div id="socialimg">
       <a href="#0" on:click={instagram}
         ><img
           alt="instagram"
@@ -60,10 +71,8 @@
       >
     </div>
   </div>
-  <p class="social" style="margin-bottom:40px">&copy; Sasy's Cake Away</p>
-  <p class="src" style="margin-top:150px">
-    Codice sorgente del sito su <a href="#0" on:click={github}>Github</a>
-  </p>
+
+
 </footer>
 
 <style>
@@ -81,5 +90,8 @@
   }
   .uk-position-relative {
     color: black;
+  }
+  .socialmobile{
+      margin-top: 120px;
   }
 </style>

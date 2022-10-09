@@ -6,7 +6,7 @@
     ) {
       document.getElementById("pric").classList.remove("uk-width-xlarge");
       document.getElementById("pric").classList.add("uk-width-medium");
-      document.getElementById("pric").style.marginLeft = "50px";
+      document.getElementById("pric").style.marginLeft = "31px";
     }
   });
 </script>

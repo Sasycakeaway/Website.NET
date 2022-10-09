@@ -9,7 +9,7 @@
         <p>Io, alby & the great family</p>
       </div>
       <div class="timeline-content">
-        <img src="https://sasyimg.imgix.net/profilo.jpg" class="img" />
+        <img src="/images/profilo.jpg" class="img" />
         <br />
         <p>
           Eccomi qui, sono Sabrina ma da sempre, per tutti, sono Sasy. Mamma di
@@ -44,7 +44,7 @@
         <p>Pionieri della IAD</p>
       </div>
       <div class="timeline-content">
-        <img src="https://sasyimg.imgix.net/iad.png" class="img" />
+        <img src="/images/iad.png" class="img" />
         <br />
         <p>
           Ma i sogni alle volte si avverano. All'inizio del 2019, finalmente si
@@ -64,7 +64,7 @@
         <p>I miei corsi di formazione</p>
       </div>
       <div class="timeline-content">
-        <img src="https://sasyimg.imgix.net/corsi.jpg" class="img" />
+        <img src="/images/corsi.jpg" class="img" />
         <br />
         <p>
           Per affrontare questo percorso mi sono preparata cercando di unire i
@@ -84,7 +84,7 @@
         <p>Manchi solo tu!</p>
       </div>
       <div class="timeline-content">
-        <img src="https://sasyimg.imgix.net/tu.jpg" class="img" />
+        <img src="/images/tu.jpg" class="img" />
         <br />
         <p>
           Vieni a trovarmi nel mio laboratorio in Viale Falchera 69, ti farò

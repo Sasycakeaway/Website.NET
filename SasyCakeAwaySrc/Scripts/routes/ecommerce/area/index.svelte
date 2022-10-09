@@ -7,6 +7,12 @@
     location.href = "/";
   }
   onMount(() => {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)
+    ) {
+       document.getElementById("cards").style.paddingRight = "30px";
+
+    }
     let user = sessionStorage.getItem("email");
     let pass = sessionStorage.getItem("password");
     if (user == null || pass == null) {
@@ -44,7 +50,7 @@
 
 <svelte:head />
 
-<div class="uk-child-width-expand@s uk-text-center container" uk-grid>
+<div class="uk-child-width-expand@s uk-text-center container" uk-grid id="cards">
   <div>
     <a href="/ecommerce/area/profilo">
       <div class="uk-card uk-card-default ">
