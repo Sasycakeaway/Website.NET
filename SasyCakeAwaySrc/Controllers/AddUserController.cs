@@ -19,6 +19,19 @@ namespace SvelteKitSample.Model
             string email = value["email"];
             string password = value["password"];
             string timestamp = value["timestamp"];
+            Guid token = new Guid();
+
+            if (value["token"] != "null")
+            {
+                token = Guid.Parse(value["token"]);
+            }
+            else
+            {
+                token = Guid.Empty;
+            }
+            
+            bool news = Boolean.Parse(value["news"]);
+
             if(cf == null || nascita == null || telefono == null || email == null || password == null || timestamp == null)
             {
                 return "0";
@@ -29,6 +42,7 @@ namespace SvelteKitSample.Model
                 {
                     using (var db = new SasyContext())
                     {
+
                         var user = new Utenti();
                         user.Cf = cf;
                         user.Nascita = nascita;
@@ -36,15 +50,28 @@ namespace SvelteKitSample.Model
                         user.PkEmail = email;
                         user.Password = password;
                         user.Timestamp = DateTime.Parse(timestamp);
+                        user.News = news;
                         db.Add(user);
                         db.SaveChanges();
+
+                        if (news == true)
+                        {
+                            var news_token = new Newsletter();
+                            news_token.PkToken = token;
+                            news_token.FkEmail = email;
+                            db.Add(news_token);
+                            db.SaveChanges();
+                        }
+
+
+
                         return "1";
                     }
 
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine(e.ToString());
+                    Console.WriteLine(e);
                     return "0";
                 }
             }

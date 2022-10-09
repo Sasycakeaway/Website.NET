@@ -22,6 +22,7 @@ namespace SvelteKitSample.Model
         public virtual DbSet<Utenti> Utentis { get; set; } = null!;
         public virtual DbSet<VwOrdini> VwOrdinis { get; set; } = null!;
 
+        public virtual DbSet<Newsletter> Newsletters { get; set; } = null!;
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -89,6 +90,21 @@ namespace SvelteKitSample.Model
                 entity.Property(e => e.Cf).HasColumnName("CF");
 
                 entity.Property(e => e.Timestamp).HasColumnType("date");
+            });
+
+            modelBuilder.Entity<Newsletter>(entity =>
+            {
+
+                entity.HasKey(e => e.PkToken);
+
+                entity.ToTable("Newsletter");
+
+                entity.Property(e => e.PkToken)
+                        .HasColumnName("PK_Token");
+
+                entity.Property(e => e.FkEmail)
+                        .HasColumnName("FK_Email");
+
             });
 
             modelBuilder.Entity<VwOrdini>(entity =>

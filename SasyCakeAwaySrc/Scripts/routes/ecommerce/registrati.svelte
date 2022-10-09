@@ -1,5 +1,4 @@
 <script >
-  const ENDPOINT = "http://149.102.141.16/adduser";
   import { dialogs } from "svelte-dialogs";
   import md5 from "md5";
   import emailjs from "@emailjs/browser";
@@ -8,20 +7,25 @@
   import { Circle2 } from 'svelte-loading-spinners';
   import Fa from 'svelte-fa/src/fa.svelte';
   import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons/index.es';
+  import { v4 as uuidv4 } from 'uuid';
+
   let buttonpress = false;
   var user,
     pass,
     passcheck,
     nascita,
     cf,
-    telefono,
+    telefono = "",
+    news = false,
     show = false,
     showcheck = false;
+
   function registrati() {
     buttonpress = true;
     let regDate = new Date();
     let isodate = regDate.toISOString().split('T')[0];
-    if (pass == passcheck && CodiceFiscaleUtils.Validator.codiceFiscale(cf).valid && user != undefined && user != "" && nascita != undefined && nascita != "" && telefono != undefined && telefono != "" && telefono.length == 9) {
+    let token = uuidv4();
+    if (pass == passcheck && CodiceFiscaleUtils.Validator.codiceFiscale(cf).valid && user != undefined && user != "" && nascita != undefined && nascita != "" && telefono != undefined && telefono != "" && telefono.length == 10) {
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
@@ -32,6 +36,16 @@
       urlencoded.append("email", user);
       urlencoded.append("password", md5(pass));
       urlencoded.append("timestamp", isodate);
+      urlencoded.append("news", news);
+      let newsremove = "Se ti fossi iscritto alla newsletter e vuoi rimuoverti clicca questo link: " + `https://sasycakeaway.com/newsletter/${user}/${token}`;
+
+      if(news == true){
+        urlencoded.append("token", token);
+      }else{
+          urlencoded.append("token", null);
+          newsremove = "";
+      }
+      
 
       var requestOptions = {
         method: 'POST',
@@ -46,6 +60,7 @@
           if(result == "1"){
             await emailjs.send("service_s11ial4", "template_4x1knko", {
               email: user,
+              newsremove: newsremove
             });
             await sessionStorage.clear();
             dialogs.alert("Account creato correttamente").then(()=> location.href = "/ecommerce/login");
@@ -166,9 +181,15 @@
           bind:value={cf}
         />
       </div>
-      <!-- <div class="uk-margin">
-            <input id="password2" class="uk-input" type="text" placeholder="Indirizzo di residenza" bind:value={indirizzo}>
-        </div> -->
+      <div class="d-flex justify-content-center">
+          <div class="form-check ">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" bind:checked={news}>
+              <label class="form-check-label" for="flexCheckDefault">
+                Vuoi ricevere comunicazioni di carattere pubblicitario sulla email che hai indicato nel form?
+              </label>
+          </div>
+      </div>
+      <br/>
       <div align="center">
         <div>
           {#if buttonpress == false}
@@ -177,6 +198,8 @@
             type="button"
             on:click={registrati}>Registrati</button
           >
+          <br/>
+          <br/>
           {:else}
           <Circle2 size="120" duration="1s"></Circle2>
           {/if}
