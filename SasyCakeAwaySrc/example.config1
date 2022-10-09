@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <appSettings>
+        <add key="DecryptionKey" value="xxx" />
+        <add key="DBPass" value="xxx" />
+        <add key="DBURL" value="xxx" />
+    </appSettings>
+</configuration>

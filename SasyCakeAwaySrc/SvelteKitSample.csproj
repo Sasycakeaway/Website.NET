@@ -1,0 +1,123 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Jering\Jering.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <SpaRoot>.\</SpaRoot>
+    <SpaSource>Scripts\</SpaSource>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'dotnet' " />
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Content Remove="$(SpaSource)**" />
+    <None Include="$(SpaSource)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.6.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="6.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="6.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.6">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.6" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Jering.IocServices.System.Net.Http" Version="0.4.0" />
+    <PackageReference Include="Jering.Markdig.Extensions.FlexiBlocks" Version="0.15.0" />
+    <PackageReference Include="Jering.Javascript.NodeJS" Version="6.3.1" />
+    <PackageReference Include="Jering.Web.SyntaxHighlighters.Prism" Version="4.3.0" />
+    <PackageReference Include="Jering.IocServices.Newtonsoft.Json" Version="0.3.0" />
+    <PackageReference Include="Jering.Web.SyntaxHighlighters.HighlightJS" Version="3.4.0" />
+    <PackageReference Include="Jering.IocServices.System.IO" Version="0.4.0" />
+    <PackageReference Include="Jering.KeyValueStore" Version="1.1.0" />
+    <PackageReference Include="SpaCliMiddleware" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="3.1.26" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="6.0.6" />
+    <PackageReference Include="Numind.AspNetCore.SpaServices.Extensions" Version="1.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.NodeServices" Version="3.1.26" />
+    <PackageReference Include="Node.js" Version="5.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Microsoft.Data.SqlClient" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Microsoft.EntityFrameworkCore.Relational" />
+    <None Remove="Microsoft.EntityFrameworkCore.Abstractions" />
+    <None Remove="Microsoft.EntityFrameworkCore.Analyzers" />
+    <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="EntityFramework" />
+    <None Remove="Jering.IocServices.System.Net.Http" />
+    <None Remove="Jering.Markdig.Extensions.FlexiBlocks" />
+    <None Remove="Jering.Javascript.NodeJS" />
+    <None Remove="Jering.Web.SyntaxHighlighters.Prism" />
+    <None Remove="Jering.IocServices.Newtonsoft.Json" />
+    <None Remove="Jering.Web.SyntaxHighlighters.HighlightJS" />
+    <None Remove="Jering.IocServices.System.IO" />
+    <None Remove="Jering.KeyValueStore" />
+    <None Remove="SpaCliMiddleware" />
+    <None Remove="Microsoft.AspNetCore.SpaServices" />
+    <None Remove="Microsoft.AspNetCore.SpaServices.Extensions" />
+    <None Remove="Numind.AspNetCore.SpaServices.Extensions" />
+    <None Remove="Microsoft.AspNetCore.NodeServices" />
+    <None Remove="Node.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="example.config1">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build">
+    <!-- Build Target:  Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Exec Command="npm --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js and npm are required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+  </Target>
+
+  <Target Name="EnsureNodeModulesInstalled" BeforeTargets="Build" Inputs="package.json" Outputs="packages-lock.json" Condition="!Exists('$(SpaRoot)node_modules')">
+    <!-- Build Target: Restore NPM packages using npm -->
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- Build Target: Run webpack dist build -->
+    <Message Importance="high" Text="Running npm build..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)build\**" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <ExcludeFromSingleFile>True</ExcludeFromSingleFile>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+</Project>
