@@ -17,13 +17,14 @@ builder.Services.AddRazorPages();
 builder.Services.ConfigureNodejsService();
 builder.Services.Configure<ForwardedHeadersOptions>(options =>
 {
-    options.KnownProxies.Add(IPAddress.Parse("149.102.141.1"));
+    options.KnownProxies.Add(IPAddress.Parse("2.58.82.195"));
 });
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
+    app.UseHttpsRedirection();
     app.UseExceptionHandler("/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
@@ -78,10 +79,6 @@ if (hostEnvironment != null)
     {
         ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
     });
-    // services.Configure<ForwardedHeadersOptions>(options =>
-    // {
-    //     options.KnownProxies.Add(IPAddress.Parse("192.168.1.100"));
-    // });
 
     app.UseAuthentication();
   
