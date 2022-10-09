@@ -2,12 +2,13 @@
   let mobile = false;
   import { onMount } from "svelte";
   import emailjs from "@emailjs/browser";
+  import { dialogs } from 'svelte-dialogs';
   let nome = "",
     email = "",
     text = "",
     cognome = "",
-    ntel = "";
-  function invia() {}
+    ntel = "",
+    privacy = false;
   onMount(async () => {
     if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
       document.getElementById("map").className = "";
@@ -16,18 +17,22 @@
     }
   });
   function manda() {
-    emailjs.send(
-      "service_ccwtjlr",
-      "template_7gaqbjl",
-      {
-        nome: nome,
-        cognome: cognome,
-        email: email,
-        ntel: ntel,
-        testo: text,
-      },
-      "XI3aGphpOi4C1--qr"
-    );
+    if(privacy){
+        emailjs.send(
+          "service_ccwtjlr",
+          "template_7gaqbjl",
+          {
+            nome: nome,
+            cognome: cognome,
+            email: email,
+            ntel: ntel,
+            testo: text,
+          },
+          "XI3aGphpOi4C1--qr"
+        );
+    }else{
+        dialogs.alert("Devi accettare l'informativa sulla privacy per mandare un messaggio a Sasy")
+    }
   }
 </script>
 
@@ -106,6 +111,9 @@
           bind:value={text}
         />
       </div>
+     <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+            <label><input type="checkbox" bind:checked={privacy}> Accetto l'<a href="/Sasy - Privacy - 2022.pdf">informativa sulla privacy</a> di Sasy's Cake Away</label>
+     </div>
     </fieldset>
     <center>
       <button class="uk-button uk-button-primary" on:click={manda}>Invia</button>

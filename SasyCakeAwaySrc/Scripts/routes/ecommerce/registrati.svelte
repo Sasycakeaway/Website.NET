@@ -18,10 +18,12 @@
     telefono = "",
     news = false,
     show = false,
-    showcheck = false;
+    showcheck = false,
+    privacy = false;
 
   function registrati() {
-    buttonpress = true;
+    if(privacy){
+         buttonpress = true;
     let regDate = new Date();
     let isodate = regDate.toISOString().split('T')[0];
     let token = uuidv4();
@@ -77,6 +79,10 @@
       buttonpress = false;
       dialogs.alert("Le password non corrispondono o il codice fiscale non è corretto");
   }
+    }else{
+        dialogs.alert("Per registrarti devi accettare l'informativa sulla privacy di Sasy's Cake Away")
+    }
+   
   }
   onMount(() => {
     emailjs.init("tfSXJVz0VLhWR2I_5");
@@ -190,6 +196,9 @@
           </div>
       </div>
       <br/>
+     <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+            <label><input type="checkbox" bind:checked={privacy}> Accetto l'<a href="/Sasy - Privacy - 2022.pdf">informativa sulla privacy</a> di Sasy's Cake Away</label>
+     </div>
       <div align="center">
         <div>
           {#if buttonpress == false}

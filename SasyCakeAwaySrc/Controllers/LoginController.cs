@@ -8,11 +8,6 @@ namespace SvelteKitSample.Model
     [Route("api/[controller]")]
     public class LoginController : ControllerBase
     {
-        public class test
-        {
-            public string email;
-            public string password;
-        }
         [HttpPost]
         public string Post([FromForm] IFormCollection request)
         {
