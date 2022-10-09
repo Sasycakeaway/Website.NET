@@ -16,25 +16,24 @@
       urlencoded.append("uuid", uuid);
 
       var requestOptions = {
-        method: 'POST',
+        method: "POST",
         headers: myHeaders,
         body: urlencoded,
-        redirect: 'follow'
+        redirect: "follow",
       };
 
       fetch("/api/changepass", requestOptions)
-        .then(response => response.text())
-        .then(result => {
-          if(result == "1"){
+        .then((response) => response.text())
+        .then((result) => {
+          if (result == "1") {
             dialogs.alert("Password cambiata con successo");
-          }else{
+          } else {
             dialogs.alert("Richiesta scaduta");
           }
         })
         .catch((error) => {
           dialogs.alert("Errore durante la creazione della richiesta");
         });
-
     } else {
       dialogs.alert(
         "Le password non corrispondono oppure alcuni campi sono mancanti"
@@ -43,8 +42,13 @@
   }
   onMount(() => {
     emailjs.init("tfSXJVz0VLhWR2I_5");
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      document.getElementById("form").classList = "uk-card uk-card-default uk-card-body uk-width-1-2@m formatel"
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      document.getElementById("form").classList =
+        "uk-card uk-card-default uk-card-body uk-width-1-2@m formatel";
     }
   });
 </script>
@@ -52,7 +56,10 @@
 <svelte:head>
   <link rel="stylesheet" href="/css/login.css" />
 </svelte:head>
-<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m forma" id="form">
+<div
+  class="uk-card uk-card-default uk-card-body uk-width-1-2@m forma"
+  id="form"
+>
   <fieldset class="uk-fieldset">
     <div align="center">
       <legend class="uk-legend">Sasy's Cake Away login</legend>
@@ -110,4 +117,4 @@
     </div>
   </fieldset>
 </div>
-<br/>
+<br />

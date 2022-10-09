@@ -4,7 +4,7 @@
   import { dialogs } from "svelte-dialogs";
 </script>
 
-<br/>
+<br />
 <div class="gallo">
   <Gallery
     on:click={(event) =>
@@ -15,12 +15,12 @@
       )}
   >
     {#each item as prod}
-    {#if prod != "list.json"}
-      <img src={"/images/slide/Dolci_Tradizionali/" + prod} />
+      {#if prod != "list.json"}
+        <img src={"/images/slide/Dolci_Tradizionali/" + prod} />
       {/if}
     {/each}
   </Gallery>
-  <br/>
+  <br />
 </div>
 
 <style>

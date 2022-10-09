@@ -2,9 +2,9 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<br/>
+<br />
 <h1 class="tit">Tartellette di frolla con gli aromi dell'orto.</h1>
-<br/>
+<br />
 <div class="divv" align="center">
   <div
     class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin"
@@ -36,7 +36,7 @@
     </div>
   </div>
 
-  <br/>
+  <br />
   <p class="citprod" style="color:rgb(195, 0, 255)">
     "La natura regala molte sorprese a chi si apre con curiosità alla
     sperimentazione. Alle volte gli accostamenti sembrano non funzionare, ma

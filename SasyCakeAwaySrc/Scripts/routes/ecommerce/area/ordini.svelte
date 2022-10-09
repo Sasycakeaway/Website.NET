@@ -17,16 +17,16 @@
     urlencoded.append("password", pass);
 
     var requestOptions = {
-      method: 'POST',
+      method: "POST",
       headers: myHeaders,
       body: urlencoded,
-      redirect: 'follow'
+      redirect: "follow",
     };
 
     fetch("/api/login", requestOptions)
-      .then(response => response.text())
-      .then(result => {
-        if(result == "1"){
+      .then((response) => response.text())
+      .then((result) => {
+        if (result == "1") {
           var myHeaders = new Headers();
           myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
@@ -35,23 +35,23 @@
           urlencoded.append("password", pass);
 
           var requestOptions = {
-            method: 'POST',
+            method: "POST",
             headers: myHeaders,
             body: urlencoded,
-            redirect: 'follow'
+            redirect: "follow",
           };
 
           fetch("/api/getordersbypass", requestOptions)
-            .then(response => response.json())
-            .then(data => {
+            .then((response) => response.json())
+            .then((data) => {
               ordini = data;
               console.log(ordini);
               loading = false;
             })
-            .catch(error => console.log('error', error));
+            .catch((error) => console.log("error", error));
         }
       })
-      .catch(error => console.log('error', error));
+      .catch((error) => console.log("error", error));
   });
 </script>
 
@@ -69,7 +69,7 @@
             <p>CAP: {order.cap}</p>
             <p>Consegna a domicilio: {order.domicilio}</p>
             <p>Totale: {order.totale}</p>
-            <p>Data dell'ordine: {order.timestamp.split('T')[0]}</p>
+            <p>Data dell'ordine: {order.timestamp.split("T")[0]}</p>
             <p>Prodotti acquistati</p>
             <ul>
               {#each JSON.parse(order.cart) as cart}

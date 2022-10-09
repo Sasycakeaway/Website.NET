@@ -7,9 +7,9 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<br/>
+<br />
 <h1 class="tit">Baci di Dama</h1>
-<br/>
+<br />
 <div class="" align="center">
   <div class="uk-card uk-card-default" id="card">
     <hr />
@@ -29,13 +29,13 @@
     </div>
   </div>
 
-  <br/>
+  <br />
   <button
     class="uk-button uk-button-primary carbut"
     id="Baci di dama"
     on:click={() => biscotti("Baci di dama")}>Aggiungi al carrello</button
   >
-  <br/>
+  <br />
   <div class="testo">
     <p class="citprod" style="color:rgb(195, 0, 255)">
       "Dammi mille baci, poi cento, poi ancora mille, poi di nuovo cento.... un

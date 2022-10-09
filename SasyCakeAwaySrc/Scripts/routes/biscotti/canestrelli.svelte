@@ -7,9 +7,9 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<br/>
+<br />
 <h1 class="tit">Canestrelli</h1>
-<br/>
+<br />
 <div class="" align="center">
   <div class="uk-card uk-card-default" id="card">
     <hr />
@@ -31,19 +31,19 @@
     </div>
   </div>
 
-  <br/>
+  <br />
   <button
     class="uk-button uk-button-primary carbut"
     id="Canestrelli"
     on:click={() => biscotti("Canestrelli")}>Aggiungi al carrello</button
   >
-  <br/>
+  <br />
   <div class="testo">
     <p class="citprod" style="color:rgb(195, 0, 255)">
       "Un fiore friabile di frolla e zucchero a velo tutto da gustare!"
     </p>
   </div>
-  <br/>
+  <br />
 </div>
 
 <style>

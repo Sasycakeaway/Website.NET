@@ -15,25 +15,21 @@ export function initpage() {
 
 export function biscotti(e) {
   console.log(e);
-  dialogs
-    .prompt("Quanti sacchetti da 250G vuoi ordinare?")
-    .then((output) => {
-      try {
-        pusha(e, output[0], 5);
-      } catch (error) {
-        console.log(error);
-      }
-    });
+  dialogs.prompt("Quanti sacchetti da 250G vuoi ordinare?").then((output) => {
+    try {
+      pusha(e, output[0], 5);
+    } catch (error) {
+      console.log(error);
+    }
+  });
 }
 
 export function pezzi(e) {
-  dialogs
-    .prompt("Quanti " + e + " vuoi ordinare?")
-    .then((output) => {
-      try {
-        pusha(e, output[0], 5);
-      } catch (error) {}
-    });
+  dialogs.prompt("Quanti " + e + " vuoi ordinare?").then((output) => {
+    try {
+      pusha(e, output[0], 5);
+    } catch (error) {}
+  });
 }
 
 export function apebox(e) {

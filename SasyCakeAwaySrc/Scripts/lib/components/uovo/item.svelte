@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/praline.css" />
 <h1 style="color:#e93657;" class="titc">Uova di Pasqua Decorate</h1>
-<br/>
+<br />
 <p class="testoc">
   Il 2021 &eacute; stato per noi il primo anno di apertura e ne abbiamo fatte
   tante. Ma la voglia di crescere ci ha spinto a trattare anche il cioccolato. E
@@ -10,7 +10,7 @@
   alla tua fidanzata? Puoi nascondere un anello di brillanti all'interno del
   nostro uovo. Sar&aacute; sicuramente una gran bella sorpresa!
 </p>
-<br/>
+<br />
 <div align="center">
   <a href="mailto:sasy.vitrani@gmail.com"
     ><button class="uk-button uk-button-primary uk-button-large but"

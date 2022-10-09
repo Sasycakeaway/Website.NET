@@ -8,7 +8,7 @@
       <div>
         <div class="uk-card uk-card-default">
           <div class="uk-card-body">
-            <br/>
+            <br />
             <a href="/biscotti/meliga"
               ><h3 class="uk-card-title contadino">CESTO DEL CONTADINO</h3></a
             >
@@ -20,7 +20,7 @@
               <li>TISANA DI NATALE</li>
             </ul>
             <p class="testisp">25 &euro;</p>
-            <br/>
+            <br />
           </div>
         </div>
       </div>
@@ -29,7 +29,7 @@
       <div>
         <div class="uk-card uk-card-default">
           <div class="uk-card-body">
-            <br/>
+            <br />
             <a href="/biscotti/meliga"
               ><h3 class="uk-card-title">CESTO OCCITANO</h3></a
             >
@@ -60,7 +60,7 @@
       <div>
         <div class="uk-card uk-card-default">
           <div class="uk-card-body">
-            <br/>
+            <br />
             <a href="/biscotti/meliga"
               ><h3 class="uk-card-title santa">CESTO DI SANTA KLAUS</h3></a
             >
@@ -73,11 +73,11 @@
               <li>UNA POCHETTE RICAMATA O UNA TISANA DI NATALE</li>
             </ul>
             <p class="testisp">30 &euro;</p>
-            <br/>
+            <br />
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<br/>
+<br />

@@ -1,7 +1,7 @@
 <script>
-  import 'uikit/dist/css/uikit.css';
-  import 'uikit/dist/js/uikit.js';
-  import 'uikit/dist/js/uikit-icons.js';
+  import "uikit/dist/css/uikit.css";
+  import "uikit/dist/js/uikit.js";
+  import "uikit/dist/js/uikit-icons.js";
   import Header from "$lib/header/Header.svelte";
   import "./app.css";
   import { onMount } from "svelte";
@@ -16,13 +16,13 @@
       },
     });
   });
-  function facebook(){
+  function facebook() {
     window.open("https://www.facebook.com/sasy.cakeaway");
   }
-  function instagram(){
+  function instagram() {
     window.open("https://www.instagram.com/sasy_cakeaway/");
   }
-  function github(){
+  function github() {
     window.open("https://github.com/Sasycakeaway/Website");
   }
 </script>
@@ -39,12 +39,17 @@
   </main>
 </body>
 <footer>
-  <p class="titindirizzo">Mi trovi in Viale falchera 69 - <a href="/Sasy - Privacy - 2022.pdf">Informativa sulla privacy</a></p>
+  <p class="titindirizzo">
+    Mi trovi in Viale falchera 69 - <a href="/Sasy - Privacy - 2022.pdf"
+      >Informativa sulla privacy</a
+    >
+  </p>
   <p style="color: black;">Seguici su Instagram e Facebook</p>
   <div uk-grid>
     <div>
       <a href="#0" on:click={instagram}
-        ><img alt="instagram"
+        ><img
+          alt="instagram"
           src="https://img.icons8.com/material-outlined/48/000000/instagram-new--v1.png"
         /></a
       >
@@ -57,14 +62,11 @@
   </div>
   <p class="social" style="margin-bottom:40px">&copy; Sasy's Cake Away</p>
   <p class="src" style="margin-top:150px">
-    Codice sorgente del sito su <a
-      href="#0" on:click={github}>Github</a
-    >
+    Codice sorgente del sito su <a href="#0" on:click={github}>Github</a>
   </p>
 </footer>
 
 <style>
-  
   footer {
     display: flex;
     flex-direction: column;
@@ -77,7 +79,7 @@
   footer a {
     font-weight: bold;
   }
-  .uk-position-relative{
+  .uk-position-relative {
     color: black;
   }
 </style>

@@ -7,9 +7,9 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<br/>
+<br />
 <h1 class="tit">Zeppole di San Giuseppe</h1>
-<br/>
+<br />
 <div class="" align="center">
   <div class="uk-card uk-card-default" id="card">
     <hr />
@@ -28,13 +28,14 @@
     </div>
   </div>
 
-  <br/>
+  <br />
   <button
     class="uk-button uk-button-primary carbut"
     id="Zeppole di San Giovanni"
-    on:click={() => pezzi("Zeppole di San Giovanni")}>Aggiungi al carrello</button
+    on:click={() => pezzi("Zeppole di San Giovanni")}
+    >Aggiungi al carrello</button
   >
-  <br/>
+  <br />
   <!-- <p class="citprod" style="color:rgb(195, 0, 255)">"Preparare dolci è molto più che saper eseguire ricette: è un vero e proprio gesto d’amore"</p> -->
 </div>
 

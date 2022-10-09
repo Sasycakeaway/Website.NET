@@ -37,7 +37,7 @@
         </a>
       </div>
     </div>
-    <br/>
+    <br />
   </div>
 
   <div class="pure-u-1 pure-u-sm-1-3 ">
@@ -65,7 +65,7 @@
         </a>
       </div>
     </div>
-    <br/>
+    <br />
   </div>
 
   <div class="pure-u-1 pure-u-sm-1-3 ">
@@ -85,13 +85,13 @@
                 src="/images/slide/Torte/Sasy_creamtart01.jpeg"
                 width="434"
               />
-              <br/>
+              <br />
             </div>
           </div>
         </a>
       </div>
     </div>
-    <br/>
+    <br />
   </div>
 </div>
 
@@ -119,7 +119,7 @@
         </a>
       </div>
     </div>
-    <br/>
+    <br />
   </div>
   <div class="pure-u-1 pure-u-sm-1-3 ">
     <div>
@@ -144,7 +144,7 @@
       </div>
     </div>
 
-    <br/>
+    <br />
   </div>
   <div class="pure-u-1 pure-u-sm-1-3 ">
     <div>
@@ -163,17 +163,17 @@
                 src="/images/slide/Uova/WhatsApp Image 2021-03-26 at 01.18.52.jpeg"
                 width="512"
               />
-              <br/>
+              <br />
             </div>
           </div>
         </a>
       </div>
     </div>
 
-    <br/>
+    <br />
   </div>
 </div>
-<br/>
+<br />
 
 <style>
   .uk-card {

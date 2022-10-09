@@ -20,16 +20,16 @@
       urlencoded.append("password", pass);
 
       var requestOptions = {
-        method: 'POST',
+        method: "POST",
         headers: myHeaders,
         body: urlencoded,
-        redirect: 'follow'
+        redirect: "follow",
       };
 
       fetch("/api/login", requestOptions)
-        .then(response => response.text())
-        .then(result => {
-          if(result != "1"){
+        .then((response) => response.text())
+        .then((result) => {
+          if (result != "1") {
             location.href = "/ecommerce/login";
           }
         })

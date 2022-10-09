@@ -33,7 +33,8 @@
             <button
               class="uk-button uk-button-primary carbut"
               id="Benvenuti al nord"
-              on:click={() => apebox("Benvenuti al nord")}>Aggiungi al carrello</button
+              on:click={() => apebox("Benvenuti al nord")}
+              >Aggiungi al carrello</button
             >
           </div>
         </div>
@@ -63,7 +64,8 @@
             <button
               class="uk-button uk-button-primary carbut"
               id="Benvenuti al sud"
-              on:click={() => apebox("Benvenuti al sud")}>Aggiungi al carrello</button
+              on:click={() => apebox("Benvenuti al sud")}
+              >Aggiungi al carrello</button
             >
           </div>
         </div>
@@ -93,7 +95,8 @@
             <button
               class="uk-button uk-button-primary carbut"
               id="La grande abbuffata"
-              on:click={() => apebox("La grande abbuffata")}>Aggiungi al carrello</button
+              on:click={() => apebox("La grande abbuffata")}
+              >Aggiungi al carrello</button
             >
           </div>
         </div>
@@ -124,7 +127,8 @@
             <button
               class="uk-button uk-button-primary carbut"
               id="Il vegetariano"
-              on:click={() => apebox("Il vegetariano")}>Aggiungi al carrello</button
+              on:click={() => apebox("Il vegetariano")}
+              >Aggiungi al carrello</button
             >
           </div>
         </div>
@@ -197,4 +201,4 @@
     </div>
   </div>
 </div>
-<br/>
+<br />

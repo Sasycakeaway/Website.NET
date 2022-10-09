@@ -8,7 +8,7 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<br/>
+<br />
 <div
   class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin cardone"
   uk-grid
@@ -23,20 +23,31 @@
       <ul class="uk-list">
         <li class="det">
           Sasy's si sceglie per la sua originalità nel proporre un prodotto
-          <a style="color: #5c44bd;font-weight: bold;">ARTISTICO</a> e di alta <a style="color: #5c44bd;font-weight: bold;">QUALITA'</a>.
+          <a style="color: #5c44bd;font-weight: bold;">ARTISTICO</a> e di alta
+          <a style="color: #5c44bd;font-weight: bold;">QUALITA'</a>.
         </li>
         <li class="det">
-          Sasy's si sceglie per la cura maniacale nella <a style="color: #5c44bd;font-weight: bold;">RICERCA</a> di abbinamenti
-          di <a style="color: #5c44bd;font-weight: bold;">COLORI</a> e <a style="color: #5c44bd;font-weight: bold;">SAPORI</a>.
+          Sasy's si sceglie per la cura maniacale nella <a
+            style="color: #5c44bd;font-weight: bold;">RICERCA</a
+          >
+          di abbinamenti di
+          <a style="color: #5c44bd;font-weight: bold;">COLORI</a>
+          e <a style="color: #5c44bd;font-weight: bold;">SAPORI</a>.
         </li>
         <li class="det">
-          Sasy's si sceglie per il suo lievito madre che è stato <a style="color: #5c44bd;font-weight: bold;">TRAMANDATO</a> con
-          amore e dedizione <a style="color: #5c44bd;font-weight: bold;">DA PIU' DI CENTO ANNI</a> e che viene rinfrescato con
+          Sasy's si sceglie per il suo lievito madre che è stato <a
+            style="color: #5c44bd;font-weight: bold;">TRAMANDATO</a
+          >
+          con amore e dedizione
+          <a style="color: #5c44bd;font-weight: bold;">DA PIU' DI CENTO ANNI</a>
+          e che viene rinfrescato con
           <a style="color: #5c44bd;font-weight: bold;">RIGOROSA ATTENZIONE</a>.
         </li>
         <li class="det">
           Sasy's si sceglie per la passione che infonde in tutte le sue
-          <a style="color: #5c44bd;font-weight: bold;">CREAZIONI</a>. E' questo il suo vero <a style="color: #5c44bd;font-weight: bold;">INGREDIENTE SEGRETO</a>!
+          <a style="color: #5c44bd;font-weight: bold;">CREAZIONI</a>. E' questo
+          il suo vero
+          <a style="color: #5c44bd;font-weight: bold;">INGREDIENTE SEGRETO</a>!
         </li>
         <li class="det">
           Sasy's si sceglie per l'attenzione alla qualità degli ingredienti:
@@ -46,14 +57,17 @@
         </li>
         <li class="det">
           Sasy's si sceglie perchè..... provate uno dei miei dolci e scrivetelo
-          voi lasciando un <a style="color: #5c44bd;font-weight: bold;">COMMENTO</a> sulla mia pagina facebook
+          voi lasciando un <a style="color: #5c44bd;font-weight: bold;"
+            >COMMENTO</a
+          > sulla mia pagina facebook
         </li>
       </ul>
     </div>
   </div>
 </div>
+
 <style>
-  .uk-card{
+  .uk-card {
     border-color: transparent;
   }
 </style>

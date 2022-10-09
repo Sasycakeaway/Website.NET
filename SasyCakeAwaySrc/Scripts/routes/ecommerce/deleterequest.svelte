@@ -4,27 +4,32 @@
   let id;
   function requestRestore() {
     var requestOptions = {
-    method: 'GET',
-    redirect: 'follow'
-  };
+      method: "GET",
+      redirect: "follow",
+    };
 
-  fetch("/api/deleterequest/" + id, requestOptions)
-    .then(response => response.text())
-    .then(result => {
-      if(result == "1"){
-        dialogs.alert("Richiesta rimossa correttamente");
-      }else{
-        dialogs.alert("La richiesta non esiste");
-      }
-    })
+    fetch("/api/deleterequest/" + id, requestOptions)
+      .then((response) => response.text())
+      .then((result) => {
+        if (result == "1") {
+          dialogs.alert("Richiesta rimossa correttamente");
+        } else {
+          dialogs.alert("La richiesta non esiste");
+        }
+      })
       .catch((error) => {
         dialogs.alert("Errore durante la rimozione della richiesta");
         console.error(error);
       });
   }
   onMount(() => {
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      document.getElementById("form").classList = "uk-card uk-card-default uk-card-body uk-width-1-2@m formatel"
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      document.getElementById("form").classList =
+        "uk-card uk-card-default uk-card-body uk-width-1-2@m formatel";
     }
   });
 </script>
@@ -32,7 +37,10 @@
 <svelte:head>
   <link rel="stylesheet" href="/css/login.css" />
 </svelte:head>
-<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m forma" id="form">
+<div
+  class="uk-card uk-card-default uk-card-body uk-width-1-2@m forma"
+  id="form"
+>
   <fieldset class="uk-fieldset">
     <div align="center">
       <legend class="uk-legend">Sasy's Cake Away login</legend>
@@ -57,4 +65,4 @@
     </div>
   </fieldset>
 </div>
-<br/>
+<br />

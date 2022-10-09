@@ -14,16 +14,16 @@
     urlencoded.append("uuid", id);
 
     var requestOptions = {
-      method: 'POST',
+      method: "POST",
       headers: myHeaders,
       body: urlencoded,
-      redirect: 'follow'
+      redirect: "follow",
     };
 
     fetch("/api/newpass", requestOptions)
-      .then(response => response.text())
-      .then(result => {
-        if(result == "1"){
+      .then((response) => response.text())
+      .then((result) => {
+        if (result == "1") {
           dialogs.alert(
             "Segui le istruzioni nella email per ripristinare la password"
           );
@@ -31,7 +31,7 @@
             uuid: id,
             email: email,
           });
-        }else{
+        } else {
           dialogs.alert("La richiesta esiste già oppure l'account non esiste");
         }
       })
@@ -41,8 +41,13 @@
   }
   onMount(() => {
     emailjs.init("tfSXJVz0VLhWR2I_5");
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      document.getElementById("form").classList = "uk-card uk-card-default uk-card-body uk-width-1-2@m formatel"
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      document.getElementById("form").classList =
+        "uk-card uk-card-default uk-card-body uk-width-1-2@m formatel";
     }
   });
 </script>
@@ -50,7 +55,10 @@
 <svelte:head>
   <link rel="stylesheet" href="/css/login.css" />
 </svelte:head>
-<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m forma" id="form">
+<div
+  class="uk-card uk-card-default uk-card-body uk-width-1-2@m forma"
+  id="form"
+>
   <fieldset class="uk-fieldset">
     <div align="center">
       <legend class="uk-legend">Sasy's Cake Away login</legend>
@@ -75,4 +83,4 @@
     </div>
   </fieldset>
 </div>
-<br/>
+<br />

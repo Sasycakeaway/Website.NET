@@ -3,7 +3,7 @@
   import md5 from "md5";
   import { init, getorder, getvariable } from "../../lib/js/paypal";
   import { onMount } from "svelte";
-  import { GooglePlacesAutocomplete } from '@beyonk/svelte-googlemaps'
+  import { GooglePlacesAutocomplete } from "@beyonk/svelte-googlemaps";
   //import google from 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBomQdV10KKTb45y-uIXWl-ZlFgyEOxcsc&libraries=places&callback=initMap'
   let nome,
     cognome,
@@ -15,15 +15,17 @@
     pass,
     cart,
     cittavar;
-  onMount(async() => {
+  onMount(async () => {
     user = sessionStorage.getItem("email");
     totale = localStorage.getItem("totale");
     pass = sessionStorage.getItem("password");
     cart = localStorage.getItem("cart");
-    if(user == null || pass == null){
-      dialogs.alert("Per completare il pagamento devi accedere al sito").then(()=>{
-        location.href = "/ecommerce/login";
-      });
+    if (user == null || pass == null) {
+      dialogs
+        .alert("Per completare il pagamento devi accedere al sito")
+        .then(() => {
+          location.href = "/ecommerce/login";
+        });
     }
   });
   function pagamento() {
@@ -39,22 +41,22 @@
         domicilio.toString(),
         user,
         pass,
-        cart,
+        cart
       );
       document.getElementById("conf").style.visibility = "hidden";
     } else alert("Compila tutti i campi richiesti");
   }
 
-  function citta(e){
+  function citta(e) {
     cittavar = e.detail.place.formatted_address;
   }
-  
 </script>
 
 <svelte:head>
   <!-- <script src="https://staging.online.satispay.com/web-button.js"></script> -->
   <script
-    src="https://www.paypal.com/sdk/js?client-id=AXG9tYzRz10-7z2Hhro6tScAENTIHDtqWdFL9gqCx2hcH8-VqKG6gs1n3yMZzge6UvLVECsfdtezoLTk&currency=EUR" data-namespace="paypal_sdk"></script>
+    src="https://www.paypal.com/sdk/js?client-id=AXG9tYzRz10-7z2Hhro6tScAENTIHDtqWdFL9gqCx2hcH8-VqKG6gs1n3yMZzge6UvLVECsfdtezoLTk&currency=EUR"
+    data-namespace="paypal_sdk"></script>
   <link rel="stylesheet" href="/css/pagamenti.css" />
 </svelte:head>
 <br />
@@ -81,7 +83,12 @@
       />
       <br />
       <br />
-      <GooglePlacesAutocomplete apiKey="AIzaSyCcnkrkY74xBbIDf4UZdYH4bZwXaSvh1nM" styleClass="uk-input" on:placeChanged={citta} placeholder="Città"/>
+      <GooglePlacesAutocomplete
+        apiKey="AIzaSyCcnkrkY74xBbIDf4UZdYH4bZwXaSvh1nM"
+        styleClass="uk-input"
+        on:placeChanged={citta}
+        placeholder="Città"
+      />
       <br />
       <br />
       <input
@@ -102,7 +109,10 @@
         name="domicilio"
         bind:checked={domicilio}
       />
-      <label for="domicilio">Consegna a domicilio o spedizione se l'indirizzo di consegna è fuori dal Piemonte</label>
+      <label for="domicilio"
+        >Consegna a domicilio o spedizione se l'indirizzo di consegna è fuori
+        dal Piemonte</label
+      >
 
       <br />
       <br />
@@ -117,4 +127,4 @@
 </div>
 
 <div id="paypal" align="center" />
-<br/>
+<br />

@@ -87,7 +87,7 @@
     acceptsReservations: "True",
   }}
 />
-<Head {mobile}/>
+<Head {mobile} />
 <br />
 <div class="prodi">
   <Prod />

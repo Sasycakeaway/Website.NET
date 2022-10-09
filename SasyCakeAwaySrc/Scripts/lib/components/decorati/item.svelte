@@ -7,7 +7,7 @@
 </svelte:head>
 
 <h1>Biscotti Decorati</h1>
-<br/>
+<br />
 <div align="center">
   <p class="parag">
     Vuoi fare un regalo originale per un'occasione particolare? Un San Valentino
@@ -21,24 +21,39 @@
     con gusto prima di regalarli.
   </p>
 </div>
-<br/>
-<div class="uk-child-width-expand@s uk-text-center foto uk-flex uk-flex-center" uk-grid align="center" uk-lightbox>
+<br />
+<div
+  class="uk-child-width-expand@s uk-text-center foto uk-flex uk-flex-center"
+  uk-grid
+  align="center"
+  uk-lightbox
+>
   <center>
-  <div uk-lightbox>
-    <a href="/images/renna.jpg">
-      <img src="/images/renna.jpg" width="512px" data-caption="Renna" alt="Foto renna"/>
-    </a>
-  </div>
-  <br/>
-  <div uk-lightbox>
-    <a href="/images/renna.jpg">
-      <img src="/images/biscotti.jpg" width="512px" data-caption="Biscotti" alt="Foto biscotti"/>
-    </a>
-  </div>
-</center>
+    <div uk-lightbox>
+      <a href="/images/renna.jpg">
+        <img
+          src="/images/renna.jpg"
+          width="512px"
+          data-caption="Renna"
+          alt="Foto renna"
+        />
+      </a>
+    </div>
+    <br />
+    <div uk-lightbox>
+      <a href="/images/renna.jpg">
+        <img
+          src="/images/biscotti.jpg"
+          width="512px"
+          data-caption="Biscotti"
+          alt="Foto biscotti"
+        />
+      </a>
+    </div>
+  </center>
 </div>
 
-<br/>
+<br />
 <div align="center">
   <p class="parag">
     Se invece vuoi un regalo tradizionale, per un segnaposto o per una occasione
@@ -54,6 +69,6 @@
     commensali.
   </p>
 </div>
-<br/>
+<br />
 <Slide />
-<br/>
+<br />

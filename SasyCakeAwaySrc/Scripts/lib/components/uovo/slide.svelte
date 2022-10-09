@@ -4,7 +4,11 @@
   <link rel="stylesheet" href="/css/decorati.css" />
 </svelte:head>
 
-<div class="uk-position-relative uk-dark" tabindex="-1" uk-slideshow="autoplay: true">
+<div
+  class="uk-position-relative uk-dark"
+  tabindex="-1"
+  uk-slideshow="autoplay: true"
+>
   <ul class="uk-slideshow-items">
     <li>
       <img src="/images/uova/intear.jpg" alt="..." width="1024" />

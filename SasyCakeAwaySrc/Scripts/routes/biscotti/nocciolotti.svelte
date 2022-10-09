@@ -2,7 +2,7 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<br/>
+<br />
 <h1>Work in progress</h1>
 <!--<h1 class="tit">Baci di Dama</h1>
     <br/>

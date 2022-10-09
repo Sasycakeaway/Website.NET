@@ -58,7 +58,6 @@
         } else {
           let resp = await dialogs.confirm("Vuoi eliminare il prodotto?");
           if (resp) {
-          
             // document.getElementById(e + "item").removeChild();
             if (
               prod != "Il trasformista" &&
@@ -108,7 +107,7 @@
         qty++;
         totale = parseInt(totale);
         totale += 5;
-        console.log(typeof(totale))
+        console.log(typeof totale);
         localStorage.setItem("cart", JSON.stringify(cart));
         localStorage.setItem("totale", totale);
         dispatch("plus", {

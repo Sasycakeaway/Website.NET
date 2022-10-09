@@ -3,12 +3,7 @@
   const ENDPOINT2 = "http://149.102.141.16/getuserbypass";
   import { onMount } from "svelte";
   import { dialogs } from "svelte-dialogs";
-  let email,
-    cf,
-    nascita,
-    telefono,
-    pass,
-    newemail;
+  let email, cf, nascita, telefono, pass, newemail;
   onMount(async () => {
     let user = sessionStorage.getItem("email");
     newemail = user;
@@ -24,43 +19,46 @@
       urlencoded.append("password", pass);
 
       var requestOptions = {
-        method: 'POST',
+        method: "POST",
         headers: myHeaders,
         body: urlencoded,
-        redirect: 'follow'
+        redirect: "follow",
       };
 
       fetch("/api/login", requestOptions)
-        .then(response => response.text())
-        .then(result => {
-          if(result == "1"){
+        .then((response) => response.text())
+        .then((result) => {
+          if (result == "1") {
             var myHeaders = new Headers();
-            myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+            myHeaders.append(
+              "Content-Type",
+              "application/x-www-form-urlencoded"
+            );
 
             var urlencoded = new URLSearchParams();
             urlencoded.append("email", user);
             urlencoded.append("password", pass);
 
             var requestOptions = {
-              method: 'POST',
+              method: "POST",
               headers: myHeaders,
               body: urlencoded,
-              redirect: 'follow'
+              redirect: "follow",
             };
 
             fetch("/api/getuserbypass", requestOptions)
-              .then(response => response.json())
-              .then(data => {
+              .then((response) => response.json())
+              .then((data) => {
                 cf = data.Cf;
                 telefono = data.Telefono;
                 nascita = data.Nascita;
               })
-              .catch(error => console.log('error', error));
-          }else{
+              .catch((error) => console.log("error", error));
+          } else {
             location.href = "/ecommerce/login";
           }
         })
-        .catch(error => console.log('error', error));
+        .catch((error) => console.log("error", error));
       // fetch(ENDPOINT, {
       //   method: "POST",
       //   headers: {

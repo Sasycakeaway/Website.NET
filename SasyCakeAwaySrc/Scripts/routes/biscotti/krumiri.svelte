@@ -7,9 +7,9 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<br/>
+<br />
 <h1 class="tit">Biscotti di frolla con gli aromi dell' orto</h1>
-<br/>
+<br />
 <div class="" align="center">
   <div class="uk-card uk-card-default" id="card">
     <hr />
@@ -28,15 +28,15 @@
     </div>
   </div>
 
-  <br/>
+  <br />
   <button
     class="uk-button uk-button-primary carbut"
     id="Krumiri"
     on:click={() => biscotti("Krumiri")}>Aggiungi al carrello</button
   >
-  <br/>
+  <br />
   <div class="testo" />
-  <br/>
+  <br />
 </div>
 
 <style>

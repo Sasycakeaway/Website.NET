@@ -83,7 +83,7 @@
                 stare insieme ai propri cari. In ogni occasione ti posso
                 accompagnare con la torta giusta per te.
               </p>
-              <br/>
+              <br />
             </div>
           </div>
         </a>

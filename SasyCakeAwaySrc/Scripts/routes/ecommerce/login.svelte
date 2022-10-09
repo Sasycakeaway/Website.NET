@@ -3,14 +3,22 @@
   import md5 from "md5";
   const ENDPOINT = "/api/login";
   import { dialogs } from "svelte-dialogs";
-  import Fa from 'svelte-fa/src/fa.svelte';
-  import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons/index.es';
+  import Fa from "svelte-fa/src/fa.svelte";
+  import {
+    faEye,
+    faEyeSlash,
+  } from "@fortawesome/free-solid-svg-icons/index.es";
   var user;
   var pass;
   let show = false;
   onMount(() => {
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      document.getElementById("form").classList = "uk-card uk-card-default uk-card-body uk-width-1-2@m formatel"
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      document.getElementById("form").classList =
+        "uk-card uk-card-default uk-card-body uk-width-1-2@m formatel";
     }
     user = sessionStorage.getItem("email");
     pass = sessionStorage.getItem("password");
@@ -23,16 +31,16 @@
       urlencoded.append("password", pass);
 
       var requestOptions = {
-        method: 'POST',
+        method: "POST",
         headers: myHeaders,
         body: urlencoded,
-        redirect: 'follow'
+        redirect: "follow",
       };
 
       fetch("/api/login", requestOptions)
-        .then(response => response.text())
-        .then(result => {
-          if(result == "1"){
+        .then((response) => response.text())
+        .then((result) => {
+          if (result == "1") {
             location.href = "/ecommerce/area/";
           }
         })
@@ -52,20 +60,20 @@
     urlencoded.append("password", md5(pass));
 
     var requestOptions = {
-      method: 'POST',
+      method: "POST",
       headers: myHeaders,
       body: urlencoded,
-      redirect: 'follow'
+      redirect: "follow",
     };
 
     fetch("/api/login", requestOptions)
-      .then(response => response.text())
-      .then(async(result) => {
-        if(result == "1"){
+      .then((response) => response.text())
+      .then(async (result) => {
+        if (result == "1") {
           await sessionStorage.setItem("email", user);
           await sessionStorage.setItem("password", md5(pass));
           location.href = "/ecommerce/area";
-        }else {
+        } else {
           dialogs.alert("Login fallito, riprovare o creare un account");
         }
       })
@@ -75,11 +83,11 @@
         );
       });
   }
-  function showfn(){
+  function showfn() {
     show = !show;
-    if(show){
+    if (show) {
       document.getElementById("pass").type = "text";
-    }else{
+    } else {
       document.getElementById("pass").type = "password";
     }
   }
@@ -88,7 +96,10 @@
 <svelte:head>
   <link rel="stylesheet" href="/css/login.css" />
 </svelte:head>
-<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m forma" id="form">
+<div
+  class="uk-card uk-card-default uk-card-body uk-width-1-2@m forma"
+  id="form"
+>
   <fieldset class="uk-fieldset">
     <div align="center">
       <legend class="uk-legend">Sasy's Cake Away login</legend>
@@ -111,12 +122,11 @@
       />
       <button class="uk-form-icon uk-form-icon-flip icon" on:click={showfn}>
         {#if show == false}
-          <Fa icon={faEye}></Fa>
+          <Fa icon={faEye} />
         {:else}
-          <Fa icon={faEyeSlash}></Fa>
+          <Fa icon={faEyeSlash} />
         {/if}
       </button>
-
     </div>
     <div class="uk-margin">
       <center>
@@ -140,10 +150,10 @@
     </div>
   </fieldset>
 </div>
-<br/>
+<br />
 
 <style>
-  .icon{
+  .icon {
     margin-right: 10px;
     margin-top: 10px;
     background-color: transparent;

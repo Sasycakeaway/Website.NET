@@ -7,9 +7,9 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<br/>
+<br />
 <h1 class="tit">Brüt ma bon</h1>
-<br/>
+<br />
 <div class="" align="center">
   <div class="uk-card uk-card-default" id="card">
     <hr />
@@ -29,20 +29,20 @@
     </div>
   </div>
 
-  <br/>
+  <br />
   <button
     class="uk-button uk-button-primary carbut"
     id="Brüt ma bon"
     on:click={() => biscotti("Brüt ma bon")}>Aggiungi al carrello</button
   >
-  <br/>
+  <br />
   <div class="testo">
     <p class="citprod" style="color:rgb(195, 0, 255)">
       "A chi non è mai capitato di se​ntirsi almeno una volta un brutto
       anatroccolo? Ma spesso l'apparenza inganna!"
     </p>
   </div>
-  <br/>
+  <br />
 </div>
 
 <style>

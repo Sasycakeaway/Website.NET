@@ -1,4 +1,4 @@
-<script >
+<script>
   import { initcart } from "../../lib/js/cart";
   import { onMount } from "svelte";
   import Stepper from "../../lib/components/stepper.svelte";
@@ -30,11 +30,11 @@
   });
 
   async function min(e) {
-    console.log(cart[e.detail.text].id)
+    console.log(cart[e.detail.text].id);
     if (
       cart[e.detail.text].id != "Il trasformista" &&
-      cart[e.detail.text].id != "Benvenuti al nord"
-      && cart[e.detail.text].id != "Benvenuti al sud" &&
+      cart[e.detail.text].id != "Benvenuti al nord" &&
+      cart[e.detail.text].id != "Benvenuti al sud" &&
       cart[e.detail.text].id != "Il vegetariano" &&
       cart[e.detail.text].id != "La grande abbuffata"
     ) {
@@ -71,23 +71,23 @@
   }
 
   function plu(e) {
-    console.log(cart[e.detail.text].id)
+    console.log(cart[e.detail.text].id);
     totale = parseInt(totale);
     if (
       cart[e.detail.text].id != "Il trasformista" &&
-      cart[e.detail.text].id != "Benvenuti al nord"
-      && cart[e.detail.text].id != "Benvenuti al sud" &&
+      cart[e.detail.text].id != "Benvenuti al nord" &&
+      cart[e.detail.text].id != "Benvenuti al sud" &&
       cart[e.detail.text].id != "Il vegetariano" &&
       cart[e.detail.text].id != "La grande abbuffata"
     ) {
       cart[e.detail.text].prezzo += 5;
       cart[e.detail.text].qty++;
-      
+
       totale += 5;
     } else {
       switch (cart[e.detail.text].id) {
         case "Benvenuti al nord":
-        cart[e.detail.text].qty++;
+          cart[e.detail.text].qty++;
           cart[e.detail.text].prezzo += 12;
           totale += 12;
           break;
@@ -114,7 +114,6 @@
   }
 
   function bin(e) {
-    
     let temp;
     cart.forEach((prod, i) => {
       if (prod.id == e) {
@@ -169,7 +168,7 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 </svelte:head>
-<br/>
+<br />
 {#if verifica == "{}"}
   <h1 align="center">
     Carrello vuoto, aggiungi prodotti al carrello visitando le pagine del sito
@@ -288,4 +287,4 @@
     >
   </div>
 {/if}
-<br/>
+<br />

@@ -1,11 +1,11 @@
 <script>
   import { onMount } from "svelte";
-  let divclass="";
+  let divclass = "";
   onMount(async () => {
     if (
       /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)
     ) {
-    }else{
+    } else {
       divclass = "bloccot";
     }
   });

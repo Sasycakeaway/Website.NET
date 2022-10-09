@@ -13,9 +13,9 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<br/>
+<br />
 <h1 class="tit">Crostata creativa</h1>
-<br/>
+<br />
 <div class="divv" align="center">
   <div class="uk-card uk-card-default" id="card">
     <hr />
@@ -35,7 +35,7 @@
     </div>
   </div>
 
-  <br/>
+  <br />
   <p class="citprod" style="color:rgb(195, 0, 255)">
     "La frolla artistica è un esperienza da coltivare. Elisabetta Corneo mi ha
     iniziato a questo mondo incredibile, nonostante il COVID-19"

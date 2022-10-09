@@ -7,9 +7,9 @@
   <title>Home</title>
   <link rel="stylesheet" href="/css/why.css" />
 </svelte:head>
-<br/>
+<br />
 <h1 class="tit">Biscotti di frolla con gli aromi dell' orto</h1>
-<br/>
+<br />
 <div class="" align="center">
   <div class="uk-card uk-card-default" id="card">
     <hr />
@@ -32,20 +32,21 @@
     </div>
   </div>
 
-  <br/>
+  <br />
   <button
     class="uk-button uk-button-primary carbut"
     id="Biscotti di frolla con gli aromi dell'orto"
-    on:click={() => biscotti("Biscotti di frolla con gli aromi dell'orto")}>Aggiungi al carrello</button
+    on:click={() => biscotti("Biscotti di frolla con gli aromi dell'orto")}
+    >Aggiungi al carrello</button
   >
-  <br/>
+  <br />
   <div class="testo">
     <p class="citprod" style="color:rgb(195, 0, 255)">
       "Timo, limone con una spruzzata di cristalli di zucchero, un gusto
       travolgente!"
     </p>
   </div>
-  <br/>
+  <br />
 </div>
 
 <style>
