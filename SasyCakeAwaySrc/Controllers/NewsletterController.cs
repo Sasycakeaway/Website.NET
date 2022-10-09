@@ -23,7 +23,7 @@ namespace SvelteKitSample.Controllers
 
                         if(token_to_delete != null)
                         {
-                            email_to_delete.News = false;
+                            email_to_delete.News = new byte[0x1];
 
                             db.Utentis.Attach(email_to_delete).Property(e => e.News).IsModified = true;
                             db.Newsletters.Remove(token_to_delete);

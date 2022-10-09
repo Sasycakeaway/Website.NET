@@ -50,7 +50,7 @@ namespace SvelteKitSample.Model
                         user.PkEmail = email;
                         user.Password = password;
                         user.Timestamp = DateTime.Parse(timestamp);
-                        user.News = news;
+                        user.News = new byte[Convert.ToByte(news)];
                         db.Add(user);
                         db.SaveChanges();
 

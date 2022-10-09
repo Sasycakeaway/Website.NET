@@ -16,7 +16,7 @@ namespace SvelteKitSample.Model
         public string PkEmail { get; set; } = null!;
         public string? Password { get; set; }
         public DateTime? Timestamp { get; set; }
-        public bool? News { get; set; }
+        public byte[] News { get; set; }
         public virtual RecoveryPassword RecoveryPassword { get; set; } = null!;
         public virtual ICollection<Ordini> Ordinis { get; set; }
     }

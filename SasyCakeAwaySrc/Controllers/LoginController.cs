@@ -8,7 +8,8 @@ namespace SvelteKitSample.Model
     [Route("api/[controller]")]
     public class LoginController : ControllerBase
     {
-        public class test {
+        public class test
+        {
             public string email;
             public string password;
         }
@@ -16,24 +17,25 @@ namespace SvelteKitSample.Model
         public string Post([FromForm] IFormCollection request)
         {
             try{
-            string password = request["password"];
-            string email = request["email"];
-            using (var context = new SasyContext())
-            {
-                Utenti user = (from Utenti in context.Utentis where Utenti.PkEmail == email select Utenti).First();
-                if(user.Password == password)
+                string password = request["password"];
+                string email = request["email"];
+                using (var context = new SasyContext())
                 {
-                    return "1";
+                    var user = context.Utentis.Where(e => e.PkEmail == email).Single();
+
+                    if (user.Password == password)
+                    {
+                        return "1";
+                    }
+                    else
+                    {
+                        return "0";
+                    }
                 }
-                else
-                {
-                    return "0";
-                }
-            }
-            }catch{
+            }catch(Exception ex){
+                Console.WriteLine(ex);
                 return "0";
             }
-
         }
     }
-}
+ }

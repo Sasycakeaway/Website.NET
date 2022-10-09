@@ -90,6 +90,9 @@ namespace SvelteKitSample.Model
                 entity.Property(e => e.Cf).HasColumnName("CF");
 
                 entity.Property(e => e.Timestamp).HasColumnType("date");
+
+                entity.Property(e => e.News).HasColumnName("News");
+
             });
 
             modelBuilder.Entity<Newsletter>(entity =>
