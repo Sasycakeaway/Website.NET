@@ -35,7 +35,7 @@
       );
     } else {
       dialogs.alert(
-        "Devi accettare l'informativa sulla privacy e il consenso alle comunicazioni per finalità promozionali per mandare un messaggio a Sasy"
+        "Devi accettare l'informativa sulla privacy e il consenso alle comunicazioni per finalit&agrave; promozionali per mandare un messaggio a Sasy"
       );
     }
   }
