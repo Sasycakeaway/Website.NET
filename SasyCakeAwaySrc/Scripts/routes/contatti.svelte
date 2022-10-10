@@ -8,7 +8,8 @@
     text = "",
     cognome = "",
     ntel = "",
-    privacy = false;
+    privacy = false,
+    prom = false;
   onMount(async () => {
     if (
       /Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)
@@ -19,7 +20,7 @@
     }
   });
   function manda() {
-    if (privacy) {
+    if (privacy && prom) {
       emailjs.send(
         "service_ccwtjlr",
         "template_7gaqbjl",
@@ -34,7 +35,7 @@
       );
     } else {
       dialogs.alert(
-        "Devi accettare l'informativa sulla privacy per mandare un messaggio a Sasy"
+        "Devi accettare l'informativa sulla privacy e il consenso alle comunicazioni per finalità promozionali per mandare un messaggio a Sasy"
       );
     }
   }
@@ -120,6 +121,11 @@
         ><input type="checkbox" bind:checked={privacy} /> Accetto l'<a
           href="/Sasy - Privacy - 2022.pdf">informativa sulla privacy</a
         > di Sasy's Cake Away</label
+      >
+    </div>
+    <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+      <label
+        ><input type="checkbox" bind:checked={prom} /> Accetto il consenso alle comunicazioni per finalit&agrave; promozionali di Sasy's Cake Away</label
       >
     </div>
   </fieldset>
