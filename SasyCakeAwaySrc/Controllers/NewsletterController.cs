@@ -1,14 +1,39 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using SvelteKitSample.Model;
 
 namespace SvelteKitSample.Controllers
 {
-    [Route("api/[controller]/{email}/{token}")]
+    [Route("api/[controller]")]
     [ApiController]
     public class NewsletterController : ControllerBase
     {
-        [HttpGet]
+        [HttpPost]
+        [Consumes("application/x-www-form-urlencoded")]
+        public string GetUser([FromForm] IFormCollection value)
+        {
+            try
+            {
+                using(var db = new SasyContext())
+                {
+                    if (value["password"] == System.Configuration.ConfigurationManager.AppSettings.Get("DBPass"))
+                    {
+                        var utenti = db.Utentis.Where(b => b.News == new byte[Convert.ToByte(true)]).Select(b => b.PkEmail).ToList();
+                        return JsonConvert.SerializeObject(utenti);
+                    }
+                    else
+                    {
+                        return "0";
+                    }
+
+                }
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return "0";
+            }
+        }
+        [HttpGet("{email}/{token}")]
         public string Delete(string email, string token)
         {
             try
